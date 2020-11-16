@@ -1,0 +1,286 @@
+.schedule {
+	&__container {
+		padding: 120px 0 23px;
+
+		@include tMax {
+			padding: 60px 0 20px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 65px;
+
+		@include tMax {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__title {
+		font-family: $montserrat;
+		font-size: 40px;
+		line-height: 44px;
+		font-weight: bold;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin-right: 10px;
+
+		@include tMax {
+			font-size: 35px;
+			line-height: 37px;
+		}
+
+		@include mMax {
+			font-size: 22px;
+			line-height: 24px;
+		}
+	}
+
+	&__all {
+		display: flex;
+		align-items: center;
+		font-family: $montserrat;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $red;
+		letter-spacing: 0.03em;
+		padding-top: 5px;
+
+		@include mMax {
+			font-size: 12px;
+			line-height: 14px;
+		}
+
+		svg {
+			width: 12px;
+			height: 12px;
+			fill: $red;
+			margin-left: 10px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -36px;
+
+		@include tMax {
+			margin: 0 -15px;
+		}
+
+		@include mMax {
+			margin: 0;
+		}
+	}
+}
+
+.schedule-item {
+	width: calc(50% - 72px);
+	margin: 0 36px 78px;
+	border: 1px solid $mainColor;
+	position: relative;
+	box-sizing: border-box;
+
+	@include tMax {
+		width: calc(50% - 30px);
+		margin: 0 15px 40px;
+	}
+
+	@include mMax {
+		width: 100%;
+		margin: 0 0 40px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.4;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__match {
+		padding: 15px;
+		font-family: $montserrat;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: bold;
+		letter-spacing: 0.04em;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include tMax {
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		@include mMax {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+
+	&__place {
+		display: flex;
+		background-color: $red;
+
+		p {
+			padding: 17px;
+			font-family: $montserrat;
+			font-size: 20px;
+			line-height: 22px;
+			font-weight: bold;
+			letter-spacing: 0.04em;
+			text-align: center;
+			color: $white;
+			text-transform: uppercase;
+
+			@include tMax {
+				padding: 10px;
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			@include mMax {
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			+ p {
+				border-left: 1.5px solid $white;
+			}
+
+			&:first-child {
+				width: 35.856%;
+			}
+
+			&:nth-child(2) {
+				width: 18.15%;
+			}
+
+			&:last-child {
+				width: 45.99%;
+				font-size: 18px;
+				line-height: 20px;
+				font-weight: 500;
+
+				@include tMax {
+					padding: 10px;
+					font-size: 16px;
+					line-height: 18px;
+				}
+
+				@include mMax {
+					font-size: 12px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+
+	&__team {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 18px 0 60px;
+
+		> p {
+			font-family: $montserrat;
+			font-size: 30px;
+			line-height: 33px;
+			font-weight: bold;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+
+			@include tMax {
+				font-size: 24px;
+				line-height: 26px;
+			}
+
+			@include mMax {
+				font-size: 20px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	&__team-item {
+		width: 46%;
+		box-sizing: border-box;
+
+		&:first-child {
+			padding-right: 12px;
+
+			@include tMax {
+				padding-right: 0;
+			}
+		}
+
+		&:last-child {
+			padding-left: 45px;
+
+			@include tMax {
+				padding-left: 0;
+			}
+		}
+
+		p {
+			font-family: $montserrat;
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			text-align: center;
+
+			@include tMax {
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&__team-item-pic {
+		width: 100%;
+		height: 87px;
+		margin-bottom: 8px;
+
+		img {
+			max-width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__button {
+		width: 208px;
+		height: 54px;
+		position: absolute;
+		bottom: -27px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include tMax {
+			height: 44px;
+		}
+
+		@include mMax {
+			width: calc(100% - 20px);
+		}
+	}
+}

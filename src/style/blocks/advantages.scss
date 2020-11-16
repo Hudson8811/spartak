@@ -1,0 +1,131 @@
+.advantages {
+	&__container {
+		padding: 120px 0 0;
+
+		@include tMax {
+			padding: 60px 0 0;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 61px;
+
+		@include tMax {
+			margin-bottom: 35px;
+		}
+
+		@include mMax {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		font-family: $montserrat;
+		font-size: 40px;
+		line-height: 44px;
+		font-weight: bold;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin-right: 10px;
+
+		@include tMax {
+			font-size: 35px;
+			line-height: 37px;
+		}
+
+		@include mMax {
+			font-size: 22px;
+			line-height: 24px;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+
+		.button {
+			font-size: 11px;
+			line-height: 13px;
+			height: 40px;
+
+			&:not(:last-child) {
+				margin-right: 17px;
+			}
+		}
+	}
+
+	&__buy {
+		width: 155px;
+	}
+
+	&__order {
+		width: 167px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30.5px;
+
+		@include tMax {
+			margin: 0 -15px;
+		}
+
+		@media (max-width: 600px) {
+			margin: 0;
+		}
+	}
+}
+
+.advantages-item {
+	width: calc(25% - 61px);
+	margin: 0 30.5px 61px;
+	padding: 20px 18px 16px 18px;
+	border: 1px solid $red;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.28);
+	box-sizing: border-box;
+
+	@include tMax {
+		width: calc(50% - 30px);
+		margin: 0 15px 30px;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+		margin: 0 0 15px;
+	}
+
+	svg {
+		max-width: 50px;
+		height: 50px;
+		margin-bottom: 8px;
+
+		@include mMax {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		font-size: 21px;
+		line-height: 27px;
+		font-weight: 500;
+		margin-bottom: 27px;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 24px;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+}

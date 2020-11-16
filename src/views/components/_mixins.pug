@@ -1,0 +1,27 @@
+mixin button(text, className, svgName, href)
+	if href
+		a.button(href=href, class=className)
+			if svgName
+				svg
+					use(xlink:href=`./svg/sprite.svg#${svgName}`)
+			span= text
+	else
+		button.button(class=className)
+			if svgName
+				svg
+					use(xlink:href=`./svg/sprite.svg#${svgName}`)
+			span= text
+
+mixin input(type, inputName, placeholder, labelText, value)
+	if type === 'text'
+		label.label-text
+			span= labelText
+			input(type='text', name=inputName, value=value, placeholder=placeholder)
+	if type === 'checkbox'
+		label.label-check
+			input(type='checkbox', name=inputName)
+			span!= labelText
+	if type === 'radio'
+		label.label-radio
+			input(type='radio', name=inputName)
+			span!= labelText

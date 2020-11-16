@@ -1,0 +1,15 @@
+@import "libs/reset.css";
+@import "libs/fonts.css";
+@import "libs/jquery.fancybox.min.css";
+@import "libs/slick.css";
+@import "libs/jquery.mCustomScrollbar.min.css";
+
+/* my style */
+
+@import "partials/_var";
+@import "partials/mixins";
+@import "partials/main";
+@import "partials/components";
+@import "partials/_header";
+@import "partials/footer";
+@import "pages/index";

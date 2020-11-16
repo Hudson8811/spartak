@@ -1,0 +1,186 @@
+.footer {
+	&__top {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 50px 60px 40px;
+		background-color: $mainColor;
+
+		@include tMax {
+			display: none;
+		}
+	}
+
+	&__logo {
+		max-width: 156px;
+		padding: 7px;
+		background-color: $white;
+		margin-right: 31px;
+		box-sizing: border-box;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__for-what {
+		max-width: 196px;
+		font-size: 13px;
+		line-height: 17px;
+		color: rgba(255, 255, 255, 0.7);
+		margin-right: 40px;
+	}
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		margin-right: 20px;
+
+		li {
+			@include dMin {
+				&:hover a {
+					color: $red;
+				}
+			}
+
+			+ li {
+				margin-left: 5.0694vw;
+			}
+
+			a {
+				font-family: $montserrat;
+				font-size: 13px;
+				line-height: 16px;
+				font-weight: 600;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				color: $white;
+				transition: color 0.3s ease;
+			}
+		}
+	}
+
+	&__contacts {
+		width: 180px;
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 25px;
+
+		@include dMin {
+			&:hover {
+				svg {
+					fill: $red;
+				}
+
+				span {
+					color: $red;
+				}
+			}
+		}
+
+		svg {
+			width: 13px;
+			height: 13px;
+			fill: $white;
+			margin-right: 8px;
+			transition: fill 0.3s ease;
+		}
+
+		span {
+			font-family: $montserrat;
+			font-size: 13px;
+			line-height: 16px;
+			font-weight: bold;
+			letter-spacing: 0.04em;
+			color: $white;
+			transition: color 0.3s ease;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		align-items: center;
+		margin: 0 -5px;
+	}
+
+	&__cards-item {
+		width: calc(33.3333% - 10px);
+		margin: 0 5px;
+		padding: 5px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.28);
+		border-radius: 5px;
+		box-sizing: border-box;
+
+		img {
+			width: 80%;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 60px 18px;
+		background-color: #1B1919;
+
+		@include tMax {
+			padding: 22px 28px;
+		}
+
+		@include mMax {
+			padding: 11px;
+			flex-direction: column;
+		}
+	}
+
+	&__nav {
+		display: flex;
+
+		@include mMax {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		li {
+			@include dMin {
+				&:hover a {
+					text-decoration: underline;
+				}
+			}
+
+			+ li {
+				margin-left: 53px;
+
+				@include mMax {
+					margin-left: 0;
+				}
+			}
+
+			a {
+				font-size: 13px;
+				line-height: 19px;
+				color: rgba(255, 255, 255, 0.7);
+				opacity: 0.6;
+			}
+		}
+	}
+
+	&__copyright {
+		font-size: 13px;
+		line-height: 19px;
+		color: rgba(255, 255, 255, 0.7);
+		opacity: 0.6;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+}
