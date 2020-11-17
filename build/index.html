@@ -12,27 +12,45 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__group"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
-        <div class="header__group"><a class="header__phone" href="tel:+70001270777">
-            <svg>
-              <use xlink:href="./svg/sprite.svg#phone"></use>
-            </svg><span>+7 000 127 0 777</span></a>
-          <div class="header__burger"><span></span></div>
+      <div class="header__wrapper">
+        <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
+          <div class="header__group"><a class="header__phone" href="tel:+70001270777">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#phone"></use>
+              </svg><span>+7 000 127 0 777</span></a>
+            <div class="header__burger">
+              <div class="icon-left"></div>
+              <div class="icon-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__group header__group--desktop">
+          <nav class="header__menu">
+            <li><a href="#">расписание матчей</a></li>
+            <li><a href="#">стадион</a></li>
+            <li><a href="#">новости</a></li>
+          </nav>
+          <button class="button header__button"><span>Купить билет</span>
+          </button>
         </div>
       </div>
-      <div class="header__group">
-        <nav class="header__menu">
+      <div class="header-menu"><img class="stripe-1" src="img/stripe-6.png" alt=""><img class="stripe-2" src="img/stripe-8.png" alt="">
+        <nav class="header-menu__list">
           <li><a href="#">расписание матчей</a></li>
           <li><a href="#">стадион</a></li>
           <li><a href="#">новости</a></li>
-        </nav>
-        <button class="button header__button"><span>Купить билет</span>
-        </button>
+          <li><a class="red" href="#">купить билет</a></li>
+        </nav><a class="header-menu__phone" href="tel:+70001270777">
+          <svg>
+            <use xlink:href="./svg/sprite.svg#phone"></use>
+          </svg><span>+7 000 127 0 777</span></a>
       </div>
     </header>
     <main class="main">
-      <div class="first-screen"><img class="stripe-1" src="img/stripe-5.png" alt=""><img class="stripe-2" src="img/stripe-7.png" alt=""><img class="stripe-3" src="img/stripe-6.png" alt="">
-        <div class="first-screen__bg"><img src="images/bg-first.jpg" alt=""></div>
+      <div class="first-screen"><img class="stripe-2" src="img/stripe-7.png" alt=""><img class="stripe-3" src="img/stripe-6.png" alt="">
+        <div class="first-screen__bg"><img class="stripe-1" src="img/stripe-5.png" alt="">
+          <div class="first-screen__bg-inner"><img src="images/bg-first.jpg" alt=""></div>
+        </div>
         <div class="first-screen__content">
           <div class="container first-screen__container">
             <div class="first-screen__title">билеты на матчи спартака</div>
@@ -159,9 +177,11 @@
             </button>
           </div>
         </div>
-        <div class="event__main"><img src="img/stripe-4.png" alt="">
+        <div class="event__main">
           <div class="event__bg"><img src="images/event.jpg" alt=""></div>
-          <div class="event__content">
+          <div class="event__content"><img src="img/stripe-4.png" alt="">
+            <!--.event__angle-->
+            <!--.event__content-inner-->
             <div class="event__title">фк спартак москва</div>
             <div class="event__text">
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

@@ -101,5 +101,17 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
 /* my scripts */
 
 $(document).ready(function () {
+	$('.header__burger').click(function () {
+		$(this).toggleClass('open');
+		$('.header-menu').toggleClass('header-menu--open');
+
+		if ($('.header-menu').hasClass('header-menu--open')) {
+			$('.main').addClass('scroll-lock');
+		} else {
+			$('.main').removeClass('scroll-lock');
+		}
+	});
+});
+$(document).ready(function () {
 
 });

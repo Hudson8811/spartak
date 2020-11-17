@@ -1,20 +1,38 @@
 header.header
-	.header__group
-		a.header__logo(href='/')
-			img(src='img/logo.png' alt='')
-		.header__group
-			a.header__phone(href='tel:+70001270777')
-				svg
-					use(xlink:href='./svg/sprite.svg#phone')
-				span +7 000 127 0 777
-			.header__burger
-				span
-	.header__group
-		nav.header__menu
+	.header__wrapper
+		.header__group.header__group--mobile
+			a.header__logo(href='/')
+				img(src='img/logo.png' alt='')
+			.header__group
+				a.header__phone(href='tel:+70001270777')
+					svg
+						use(xlink:href='./svg/sprite.svg#phone')
+					span +7 000 127 0 777
+				.header__burger
+					.icon-left
+					.icon-right
+		.header__group.header__group--desktop
+			nav.header__menu
+				li
+					a(href='#') расписание матчей
+				li
+					a(href='#') стадион
+				li
+					a(href='#') новости
+			+button('Купить билет', 'header__button')
+	.header-menu
+		img.stripe-1(src='img/stripe-6.png' alt='')
+		img.stripe-2(src='img/stripe-8.png' alt='')
+		nav.header-menu__list
 			li
 				a(href='#') расписание матчей
 			li
 				a(href='#') стадион
 			li
 				a(href='#') новости
-		+button('Купить билет', 'header__button')
+			li
+				a.red(href='#') купить билет
+		a.header-menu__phone(href='tel:+70001270777')
+			svg
+				use(xlink:href='./svg/sprite.svg#phone')
+			span +7 000 127 0 777

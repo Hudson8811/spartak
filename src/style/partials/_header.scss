@@ -1,23 +1,68 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	width: 100%;
 	min-height: 78px;
-	padding-left: 53px;
-	padding-right: 59px;
-	box-sizing: border-box;
 	position: relative;
-	z-index: 20;
+
+	@include tMax {
+		min-height: 65px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 20;
+		background-color: $white;
+		padding-left: 53px;
+		padding-right: 59px;
+		box-sizing: border-box;
+
+		@include tMax {
+			padding-left: 27px;
+			padding-right: 27px;
+		}
+	}
 
 	&__group {
 		display: flex;
 		align-items: center;
 		height: 100%;
+
+		&--desktop {
+			@include tMax {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			@include tMax {
+				width: 100%;
+				justify-content: space-between;
+			}
+		}
 	}
 
 	&__logo {
 		margin-right: 72px;
+
+		@include tMax {
+			width: 152px;
+		}
+
+		@include mMax {
+			margin-right: 0;
+			width: 116px;
+		}
+
+		img {
+			@include tMax {
+				width: 100%;
+				height: 100%;
+			}
+		}
 	}
 
 	&__phone {
@@ -35,6 +80,10 @@
 			&:hover {
 				opacity: 0.7;
 			}
+		}
+
+		@include mMax {
+			display: none;
 		}
 
 		svg {
@@ -82,5 +131,207 @@
 
 	&__button {
 		width: 161px;
+	}
+
+	&__burger {
+		display: none;
+		align-items: center;
+		width: 31px;
+		height: 18px;
+		position: relative;
+		cursor: pointer;
+		transition-duration: 0.4s;
+		margin-left: 64px;
+
+		@include tMax {
+			display: flex;
+		}
+
+		.icon-left {
+			position: absolute;
+			top: 6px;
+			width: 19px;
+			height: 3px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		.icon-left:before {
+			content: "";
+			width: 19px;
+			height: 3px;
+			position: absolute;
+			top: -6px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		.icon-left:after {
+			content: "";
+			width: 19px;
+			height: 3px;
+			position: absolute;
+			top: 6px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		.icon-right {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 19px;
+			height: 3px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		.icon-right:before {
+			content: "";
+			width: 19px;
+			height: 3px;
+			position: absolute;
+			top: -6px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		.icon-right:after {
+			content: "";
+			width: 19px;
+			height: 3px;
+			position: absolute;
+			top: 6px;
+			transition-duration: 0.4s;
+			background-color: $red;
+		}
+
+		&.open .icon-left {
+			transition-duration: 0.4s;
+			background: transparent;
+		}
+
+		&.open .icon-left:before {
+			transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+		}
+
+		&.open .icon-left:after {
+			transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+		}
+
+		&.open .icon-right {
+			transition-duration: 0.4s;
+			background: transparent;
+		}
+
+		&.open .icon-right:before {
+			transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+		}
+
+		&.open .icon-right:after {
+			transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+		}
+	}
+
+	.header-menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 19;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: calc(100vh - 66px);
+		background-color: $white;
+		transform: translateY(-100%);
+		transition: transform 0.4s linear;
+
+		@include mMax {
+			min-height: calc(100vh - 104px);
+		}
+
+		.stripe-1,
+		.stripe-2 {
+			position: absolute;
+			pointer-events: none;
+		}
+
+		.stripe-1 {
+			width: 25%;
+			top: 0;
+			left: 0;
+		}
+
+		.stripe-2 {
+			width: 46%;
+			bottom: 0;
+			right: 0;
+		}
+
+		&__list {
+			text-align: center;
+
+			@include mMax {
+				margin-top: 40px;
+			}
+
+			li {
+				+ li {
+					margin-top: 70px;
+
+					@include mMax {
+						margin-top: 40px;
+					}
+				}
+
+				a {
+					font-family: $montserrat;
+					font-size: 50px;
+					line-height: 60px;
+					font-weight: 800;
+					text-transform: uppercase;
+					letter-spacing: 0.04em;
+
+					@include mMax {
+						font-size: 21px;
+						line-height: 25px;
+					}
+
+					&.red {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		&__phone {
+			display: none;
+			align-items: center;
+			font-family: $montserrat;
+			font-size: 14px;
+			line-height: 17px;
+			color: $red;
+			font-weight: bold;
+			letter-spacing: 0.04em;
+			transition: opacity 0.3s ease;
+			margin-top: 40px;
+
+			@include mMax {
+				display: flex;
+			}
+
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: $red;
+				margin-right: 10px;
+			}
+		}
+
+		&--open {
+			transform: translateY(0);
+		}
 	}
 }

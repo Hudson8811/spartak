@@ -1,4 +1,6 @@
 .event {
+	overflow: hidden;
+
 	&__top {
 		padding: 62px 283px;
 		position: relative;
@@ -76,32 +78,18 @@
 		@include tMax {
 			flex-direction: column;
 		}
-
-		> img {
-			height: 100%;
-			position: absolute;
-			top: 0;
-			right: 46%;
-			z-index: 1;
-			pointer-events: none;
-
-			@include tMax {
-				display: none;
-			}
-		}
 	}
 
 	&__bg {
-		width: 100%;
+		width: 50%;
 		height: 100%;
-		max-width: 590px;
 		position: absolute;
 		top: 0;
 		left: 0;
 
 		@include tMax {
 			position: relative;
-			max-width: 100%;
+			width: 100%;
 			height: 500px;
 		}
 
@@ -117,25 +105,56 @@
 	}
 
 	&__content {
-		width: 40%;
+		width: 100%;
 		margin-left: auto;
-		padding: 90px 135px 90px 340px;
-		background-color: $red;
-		clip-path: polygon(22.5% 0, 100% 0, 100% 100%, 0% 100%);
+		padding: 90px 94px 86px;
+		position: relative;
 
 		@include tMax {
 			width: 100%;
-			margin-left: 0;
 			padding: 40px 28px;
-			clip-path: none;
 			box-sizing: border-box;
+			background-color: $red;
 		}
+
+		> img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1;
+			pointer-events: none;
+
+			@include tMax {
+				display: none;
+			}
+		}
+	}
+
+	&__angle {
+		background-color: $red;
+		transform: skewX(-25deg);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__title,
 	&__text {
+		width: 47%;
+		margin-left: auto;
 		position: relative;
 		z-index: 1;
+
+		@include tMax {
+			width: 100%;
+			max-width: 575px;
+			text-align: center;
+			margin: 0 auto;
+		}
 	}
 
 	&__title {
