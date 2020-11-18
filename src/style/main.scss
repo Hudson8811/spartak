@@ -3,8 +3,10 @@
 @import "libs/jquery.fancybox.min.css";
 @import "libs/slick.css";
 @import "libs/jquery.mCustomScrollbar.min.css";
+@import "libs/nice-select.css";
+@import "libs/datepicker.css";
 
-/* my style */
+/* blocks */
 
 @import "partials/_var";
 @import "partials/mixins";
@@ -12,4 +14,15 @@
 @import "partials/components";
 @import "partials/_header";
 @import "partials/footer";
-@import "pages/index";
+@import "blocks/first-screen";
+@import "blocks/schedule";
+@import "blocks/event";
+@import "blocks/advantages";
+@import "blocks/news";
+@import "blocks/about";
+@import "blocks/payment";
+@import "blocks/payment-rule";
+
+/* pages */
+@import "pages/purchase";
+@import "pages/purchase-detail";

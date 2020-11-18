@@ -1,0 +1,111 @@
+.payment-rule {
+	background-color: $red;
+	position: relative;
+
+	> img {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 17.5%;
+	}
+
+	&__container {
+		padding: 103px 0 28px;
+		position: relative;
+
+		@include tMax {
+			padding: 60px 0 30px;
+		}
+	}
+
+	&__title {
+		max-width: 490px;
+		font-family: $montserrat;
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: bold;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 63px;
+
+		@include tMax {
+			font-size: 35px;
+			line-height: 37px;
+			margin-bottom: 40px;
+		}
+
+		@include mMax {
+			max-width: 100%;
+			font-size: 26px;
+			line-height: 30px;
+			text-align: center;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -40px;
+
+		@include tMax {
+			margin: 0 -15px;
+		}
+
+		@include mMax {
+			margin: 0;
+		}
+	}
+}
+
+.payment-item {
+	width: calc(33.3333% - 80px);
+	margin: 0 40px 50px;
+	padding: 22px 20px 31px 22px;
+	border: 1px solid $white;
+	box-sizing: border-box;
+
+	@include tMax {
+		width: calc(50% - 30px);
+		margin: 0 15px 30px;
+	}
+
+	@include mMax {
+		width: 100%;
+		margin: 0 0 15px;
+	}
+
+	svg {
+		max-width: 77px;
+		height: 77px;
+		margin-bottom: 20px;
+
+		@include tMax {
+			display: block;
+			margin: 0 auto 18px;
+		}
+	}
+
+	&__title {
+		font-size: 21px;
+		line-height: 27px;
+		font-weight: 500;
+		color: $white;
+		margin-bottom: 24px;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 24px;
+		color: $white;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+}

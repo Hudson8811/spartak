@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <!--title= `${page.title}`-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
+          <div class="header__group"><a class="header__phone" href="tel:+70001270777">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#phone"></use>
+              </svg><span>+7 000 127 0 777</span></a>
+            <div class="header__burger">
+              <div class="icon-left"></div>
+              <div class="icon-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__group header__group--desktop">
+          <nav class="header__menu">
+            <li><a href="#">расписание матчей</a></li>
+            <li><a href="#">стадион</a></li>
+            <li><a href="#">новости</a></li>
+          </nav>
+          <button class="button header__button"><span>Купить билет</span>
+          </button>
+        </div>
+      </div>
+      <div class="header-menu"><img class="stripe-1" src="img/stripe-6.png" alt=""><img class="stripe-2" src="img/stripe-8.png" alt="">
+        <nav class="header-menu__list">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a class="red" href="#">купить билет</a></li>
+        </nav><a class="header-menu__phone" href="tel:+70001270777">
+          <svg>
+            <use xlink:href="./svg/sprite.svg#phone"></use>
+          </svg><span>+7 000 127 0 777</span></a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="purchase-detail">
+        <div class="purchase-detail__event" style="background: url(&quot;images/bg-schedule.jpg&quot;);">
+          <div class="container purchase-detail__event-container">
+            <nav class="breadcrumbs purchase__breadcrumbs">
+              <li><a href="#">Главная</a>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow"></use>
+                </svg>
+              </li>
+              <li><a href="#">Купить билет</a>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow"></use>
+                </svg>
+              </li>
+              <li><span class="breadcrumbs__link breadcrumbs__link--active">Тинькофф Российская премьер-лига</span></li>
+            </nav>
+            <div class="purchase-detail__title">купить билет</div>
+            <div class="schedule">
+              <div class="schedule__wrapper">
+                <div class="schedule-item">
+                  <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                  <div class="schedule-item__content">
+                    <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                    <div class="schedule-item__place">
+                      <p>17 октября</p>
+                      <p>19:00</p>
+                      <p>“Открытие арена”</p>
+                    </div>
+                    <div class="schedule-item__team">
+                      <div class="schedule-item__team-item">
+                        <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                        <p>спартак</p>
+                      </div>
+                      <p>vs.</p>
+                      <div class="schedule-item__team-item">
+                        <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                        <p>ФК химки</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="purchase-detail__stadium">
+          <div class="container purchase-detail__stadium-container">
+            <div class="purchase-detail__wrapper">
+              <div class="purchase-detail__scheme">
+                <div class="btn-zoom">
+                  <div class="btn-zoom__btn btn-zoom__btn--in">+</div>
+                  <div class="btn-zoom__btn btn-zoom__btn--out">-</div>
+                </div>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#stadium"></use>
+                </svg>
+              </div>
+              <div class="table">
+                <div class="table__inner">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>сектор</th>
+                        <th>наличие</th>
+                        <th>цена</th>
+                        <th>количество</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D233</td>
+                        <td>32 билета</td>
+                        <td class="red">3000 RUB</td>
+                        <td>
+                          <div class="input-number">
+                            <div class="input-number__btn input-number__btn--less">-</div>
+                            <input type="number" name="number" min="0" max="999" value="0">
+                            <div class="input-number__btn input-number__btn--more">+</div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button"><span>в корзину</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment-rule"><img src="img/stripe-1.png" alt="">
+          <div class="container payment-rule__container">
+            <div class="payment-rule__title">как купить билет на матч</div>
+            <div class="payment-rule__wrapper">
+              <div class="payment-item">
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#ticket-white"></use>
+                </svg>
+                <div class="payment-item__title">Выберите билет у нас на сайте</div>
+                <div class="payment-item__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.</div>
+              </div>
+              <div class="payment-item">
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#contact"></use>
+                </svg>
+                <div class="payment-item__title">Заполните контактную форму</div>
+                <div class="payment-item__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.</div>
+              </div>
+              <div class="payment-item">
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#card"></use>
+                </svg>
+                <div class="payment-item__title">Выберите способ оплаты</div>
+                <div class="payment-item__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__logo"><img src="img/logo.png" alt=""></div>
+        <div class="footer__for-what">Консьерж-сервис по оказанию услуг бронирования и доставке билетов</div>
+        <nav class="footer__menu">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </nav>
+        <div class="footer__contacts"><a class="footer__phone" href="tel:+70001270777">
+            <svg>
+              <use xlink:href="./svg/sprite.svg#phone"></use>
+            </svg><span>+7 000 127 0 777</span></a>
+          <div class="footer__cards">
+            <div class="footer__cards-item"><img src="images/payment/visa.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/mastercard.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/world.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <nav class="footer__nav">
+          <li><a href="#">Способы оплаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Оферта</a></li>
+        </nav>
+        <div class="footer__copyright">© 2020. Разработано в Origy</div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

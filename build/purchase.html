@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <!--title= `${page.title}`-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
+          <div class="header__group"><a class="header__phone" href="tel:+70001270777">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#phone"></use>
+              </svg><span>+7 000 127 0 777</span></a>
+            <div class="header__burger">
+              <div class="icon-left"></div>
+              <div class="icon-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__group header__group--desktop">
+          <nav class="header__menu">
+            <li><a href="#">расписание матчей</a></li>
+            <li><a href="#">стадион</a></li>
+            <li><a href="#">новости</a></li>
+          </nav>
+          <button class="button header__button"><span>Купить билет</span>
+          </button>
+        </div>
+      </div>
+      <div class="header-menu"><img class="stripe-1" src="img/stripe-6.png" alt=""><img class="stripe-2" src="img/stripe-8.png" alt="">
+        <nav class="header-menu__list">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a class="red" href="#">купить билет</a></li>
+        </nav><a class="header-menu__phone" href="tel:+70001270777">
+          <svg>
+            <use xlink:href="./svg/sprite.svg#phone"></use>
+          </svg><span>+7 000 127 0 777</span></a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="purchase">
+        <div class="container purchase__container">
+          <nav class="breadcrumbs purchase__breadcrumbs">
+            <li><a href="#">Главная</a>
+              <svg>
+                <use xlink:href="./svg/sprite.svg#arrow"></use>
+              </svg>
+            </li>
+            <li><span class="breadcrumbs__link breadcrumbs__link--active">Купить билет</span></li>
+          </nav>
+          <div class="purchase__title">купить билет</div>
+          <div class="purchase__filter">
+            <div class="input-date">
+              <input type="text" name="date" placeholder="DD / mm / yyyy">
+            </div>
+            <select class="select" data-placeholder="тип события:" data-option="выберите тип события">
+              <option value="1">премьер-лига</option>
+              <option value="2">чемпионат мира</option>
+              <option value="3">чемпионат мира</option>
+              <option value="4">премьер-лига</option>
+              <option value="5">премьер-лига</option>
+              <option value="6">премьер-лига</option>
+              <option value="7">премьер-лига</option>
+              <option value="8">премьер-лига</option>
+              <option value="9">премьер-лига</option>
+            </select>
+          </div>
+          <div class="schedule">
+            <div class="schedule__wrapper">
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                <div class="schedule-item__content">
+                  <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                  <div class="schedule-item__place">
+                    <p>17 октября</p>
+                    <p>19:00</p>
+                    <p>“Открытие арена”</p>
+                  </div>
+                  <div class="schedule-item__team">
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                      <p>спартак</p>
+                    </div>
+                    <p>vs.</p>
+                    <div class="schedule-item__team-item">
+                      <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                      <p>ФК химки</p>
+                    </div>
+                  </div>
+                  <button class="button schedule-item__button"><span>Купить билет</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment"><img src="img/stripe-1.png" alt="">
+          <div class="container payment__container">
+            <div class="payment__wrapper">
+              <div class="payment__col">
+                <div class="payment__title">ОПЛАТА С ПОМОЩЬЮ БАНКОВСКОЙ КАРТЫ</div>
+                <div class="payment__text">Принимаем оплаты банковской картой и это безопасно. Для выбора оплаты товара с помощью банковской карты на соответствующей странице сайта необходимо нажать кнопку "Оплата банковской картой".</div>
+              </div>
+              <div class="payment__col">
+                <div class="payment__cards">
+                  <div class="payment__cards-item"><img src="images/payment/visa.png" alt=""></div>
+                  <div class="payment__cards-item"><img src="images/payment/mastercard.png" alt=""></div>
+                  <div class="payment__cards-item"><img src="images/payment/world.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__logo"><img src="img/logo.png" alt=""></div>
+        <div class="footer__for-what">Консьерж-сервис по оказанию услуг бронирования и доставке билетов</div>
+        <nav class="footer__menu">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </nav>
+        <div class="footer__contacts"><a class="footer__phone" href="tel:+70001270777">
+            <svg>
+              <use xlink:href="./svg/sprite.svg#phone"></use>
+            </svg><span>+7 000 127 0 777</span></a>
+          <div class="footer__cards">
+            <div class="footer__cards-item"><img src="images/payment/visa.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/mastercard.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/world.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <nav class="footer__nav">
+          <li><a href="#">Способы оплаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Оферта</a></li>
+        </nav>
+        <div class="footer__copyright">© 2020. Разработано в Origy</div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

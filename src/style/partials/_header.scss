@@ -4,6 +4,7 @@
 	width: 100%;
 	min-height: 78px;
 	position: relative;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 
 	@include tMax {
 		min-height: 65px;

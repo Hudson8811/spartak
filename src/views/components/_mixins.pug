@@ -25,3 +25,33 @@ mixin input(type, inputName, placeholder, labelText, value)
 		label.label-radio
 			input(type='radio', name=inputName)
 			span!= labelText
+
+mixin breadcrumbs(links, className)
+	nav.breadcrumbs(class=className)
+		each elem, i in links
+			if i === links.length - 1
+				li
+					span.breadcrumbs__link.breadcrumbs__link--active= elem.text
+			else
+				li
+					a(href=elem.href)= elem.text
+					svg
+						use(xlink:href='./svg/sprite.svg#arrow')
+
+mixin select(placeholder, startOption)
+	select.select(data-placeholder= placeholder, data-option= startOption)
+		option(value="1") премьер-лига
+		option(value="2") чемпионат мира
+		option(value="3") чемпионат мира
+		option(value="4") премьер-лига
+		option(value="5") премьер-лига
+		option(value="6") премьер-лига
+		option(value="7") премьер-лига
+		option(value="8") премьер-лига
+		option(value="9") премьер-лига
+
+mixin inputNum()
+	.input-number
+		.input-number__btn.input-number__btn--less -
+		input(type='number' name='number' min='0' max='999' value='0')
+		.input-number__btn.input-number__btn--more +

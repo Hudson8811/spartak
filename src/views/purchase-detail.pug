@@ -1,0 +1,163 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.purchase-detail
+		.purchase-detail__event(style='background: url("images/bg-schedule.jpg");')
+			.container.purchase-detail__event-container
+				+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Купить билет'}, {href: '#', text: 'Тинькофф Российская премьер-лига'}], 'purchase__breadcrumbs')
+				.purchase-detail__title купить билет
+				.schedule
+					.schedule__wrapper
+						.schedule-item
+							.schedule-item__bg
+								img(src='images/bg-schedule.jpg' alt='')
+							.schedule-item__content
+								.schedule-item__match ТИНЬКОФФ российская премьер-лига
+								.schedule-item__place
+									p 17 октября
+									p 19:00
+									p “Открытие арена”
+								.schedule-item__team
+									.schedule-item__team-item
+										.schedule-item__team-item-pic
+											img(src='images/schedule/team-1.png' alt='')
+										p спартак
+									p vs.
+									.schedule-item__team-item
+										.schedule-item__team-item-pic
+											img(src='images/schedule/team-2.png' alt='')
+										p ФК химки
+		.purchase-detail__stadium
+			.container.purchase-detail__stadium-container
+				.purchase-detail__wrapper
+					.purchase-detail__scheme
+						.btn-zoom
+							.btn-zoom__btn.btn-zoom__btn--in +
+							.btn-zoom__btn.btn-zoom__btn--out -
+						svg
+							use(xlink:href='./svg/sprite.svg#stadium')
+					.table
+						.table__inner
+							table
+								thead
+									tr
+										th сектор
+										th наличие
+										th цена
+										th количество
+										th
+								tbody
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+									tr
+										td D233
+										td 32 билета
+										td.red 3000 RUB
+										td
+											+inputNum()
+										td
+											+button('в корзину')
+		include blocks/payment-rule
