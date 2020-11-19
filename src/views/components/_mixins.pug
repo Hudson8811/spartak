@@ -6,24 +6,24 @@ mixin button(text, className, svgName, href)
 					use(xlink:href=`./svg/sprite.svg#${svgName}`)
 			span= text
 	else
-		button.button(class=className)
+		button.button(class=className)&attributes(attributes)
 			if svgName
 				svg
 					use(xlink:href=`./svg/sprite.svg#${svgName}`)
 			span= text
 
 mixin input(type, inputName, placeholder, labelText, value)
-	if type === 'text'
+	if type === 'text' || type === 'email'
 		label.label-text
 			span= labelText
-			input(type='text', name=inputName, value=value, placeholder=placeholder)
+			input(type=('text' || 'email'), name=inputName, value=value, placeholder=placeholder)
 	if type === 'checkbox'
 		label.label-check
 			input(type='checkbox', name=inputName)
 			span!= labelText
 	if type === 'radio'
 		label.label-radio
-			input(type='radio', name=inputName)
+			input(type='radio', name=inputName)&attributes(attributes)
 			span!= labelText
 
 mixin breadcrumbs(links, className)

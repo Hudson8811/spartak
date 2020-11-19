@@ -1,0 +1,21 @@
+mixin popup()
+	#popup-form.popup-form(style='display: none')
+		form(action='' method='POST')
+			.popup-form__title контактные данные
+			+input('text', 'surname', 'Игорь', 'Имя')
+			+input('text', 'phone', '', 'Телефон')
+			+input('email', 'email', 'Igor123@gmail.com', 'Email')
+			.popup-form__radio-group
+				+input('radio', 'delivery', '', 'Доставка')(checked)
+				+input('radio', 'delivery', '', 'Самовывоз')
+
+			.popup-form__payment-method Способ оплаты:
+
+			.popup-form__radio-group
+				.popup-form__radio-item
+					+input('radio', 'payment', '', 'Оплата онлайн', 'online')
+					p * после подтверждения заказа, откроется страница оплаты, с возможностью выбора карты.
+				.popup-form__radio-item
+					+input('radio', 'payment', '', 'Оплата наличными', 'cash')
+					p * вы сможете оплатить билет при получении.
+			+button('подтвердить заказ', 'popup-form__submit')(type='submit')

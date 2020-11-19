@@ -1,0 +1,51 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.order
+		.container.order__container
+			+breadcrumbs([{href: '#', text: 'Главная'},
+				{href: '#', text: 'Купить билет'},
+				{href: '#', text: 'Тинькофф Российская премьер-лига'},
+				{href: '#', text: 'Оформление заказа'}
+			], 'order__breadcrumbs')
+			.order__title оформление заказа
+			form(action='' method='POST')
+				.table
+					.table__inner
+						table
+							thead
+								tr
+									th матч
+									th место
+									th количество
+									th цена
+									th
+							tbody
+								tr
+									td
+										div
+											p Тинькофф Российская премьер-лига
+											p Спартак (Москва) - ФК Химки (Химки)
+											p 17 октября 2020 в 19:00
+									td
+										div
+											p Сектор 223
+											p Ряд: 10
+											p Место: 3
+									td
+										+inputNum()
+									td.red 3000 RUB
+									td
+										button.order__remove
+											svg
+												use(xlink:href='./svg/sprite.svg#basket')
+				+button('оформить заказ', 'order__button', '', '#popup-form')

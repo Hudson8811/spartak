@@ -2,6 +2,7 @@ doctype html
 
 block vars
 include ../components/_mixins
+include ../partials/popup
 
 html(lang="ru")
 	head
@@ -25,7 +26,7 @@ html(lang="ru")
 		block footer
 			include ../partials/_footer
 
-		block modals
+		+popup()
 
 
 		script(src="js/main.js")

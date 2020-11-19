@@ -1,4 +1,7 @@
 .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	max-width: 100%;
 	padding: 12px 16px;
 	border: 1px solid $red;
@@ -46,6 +49,9 @@
 		padding: 15px 20px;
 		font-size: 15px;
 		line-height: 22px;
+		border: 1px solid $red;
+		box-sizing: border-box;
+		margin-top: 7px;
 
 		&::placeholder {
 			opacity: 0.5;
@@ -56,9 +62,18 @@
 		}
 	}
 
+	input[name='phone'] {
+		&:focus::placeholder {
+			opacity: 0.5;
+		}
+	}
+
 	span {
-		font-size: 16px;
+		font-family: $montserrat;
+		font-size: 14px;
 		line-height: 21px;
+		font-weight: 600;
+		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		color: $red;
 	}
@@ -93,11 +108,13 @@
 }
 
 .label-radio {
+	display: inline-block;
+
 	input {
 		display: none;
 
 		&:checked + span::before {
-			background: url("data: image/svg+xml, %3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='7' fill='#E5173E'%3E%3Csvg%3E");
+			background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='7' cy='7' r='7' fill='%23E5173E'/%3e%3c/svg%3e ") no-repeat center;
 		}
 	}
 
@@ -116,10 +133,8 @@
 			height: 22px;
 			border: 1px solid $red;
 			margin-right: 13px;
-		}
-
-		&::after {
-
+			border-radius: 50%;
+			box-sizing: border-box;
 		}
 	}
 }
@@ -336,6 +351,7 @@ input[type=number] {
 				width: 100%;
 				display: block;
 				border: 1px solid $red;
+				box-sizing: border-box;
 			}
 		}
 	}

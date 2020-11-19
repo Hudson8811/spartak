@@ -1,0 +1,122 @@
+.popup-form {
+	max-width: 733px;
+	width: 100%;
+	padding: 42px 83px 51px 84px;
+
+	@include mMax {
+		padding: 50px 20px;
+	}
+
+	&__title {
+		font-family: $montserrat;
+		font-size: 30px;
+		line-height: 33px;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin-bottom: 45px;
+
+		@include mMax {
+			font-size: 22px;
+			line-height: 24px;
+			text-align: center;
+			margin-bottom: 28px;
+		}
+	}
+
+	&__radio-group {
+		display: flex;
+		margin-top: 17px;
+
+		@include mMax {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label {
+			@include mMax {
+				max-width: 182px;
+				width: 100%;
+			}
+
+			+ label {
+				margin-left: 33px;
+
+				@include mMax {
+					margin-left: 0;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+
+	&__payment-method {
+		margin: 30px 0 22px;
+		font-size: 15px;
+		line-height: 24px;
+		opacity: 0.5;
+
+		@include mMax {
+			text-align: center;
+		}
+	}
+
+	&__radio-item {
+		max-width: 182px;
+
+		+ .popup-form__radio-item {
+			margin-left: 35px;
+
+			@include mMax {
+				margin-left: 0;
+				margin-top: 15px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 18px;
+			opacity: 0.5;
+			margin-top: 6px;
+		}
+	}
+
+	&__submit {
+		width: 228px;
+		padding: 17px 16px;
+		margin-top: 35px;
+
+		@include mMax {
+			margin: 35px auto 0;
+		}
+	}
+
+	form {
+		label {
+			&:not(:last-child) input {
+				margin-bottom: 20px;
+			}
+
+			+ label input {
+				margin-top: 12px;
+			}
+		}
+	}
+}
+
+.popup-close {
+	position: absolute;
+	top: 23px;
+	right: 29px;
+	cursor: pointer;
+
+	@include dMin {
+		&:hover svg {
+			opacity: 0.5;
+		}
+	}
+
+	svg {
+		transition: opacity 0.2s ease;
+	}
+}

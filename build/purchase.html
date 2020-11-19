@@ -272,6 +272,45 @@
         <div class="footer__copyright">© 2020. Разработано в Origy</div>
       </div>
     </footer>
+    <div class="popup-form" id="popup-form" style="display: none">
+      <form action="" method="POST">
+        <div class="popup-form__title">контактные данные</div>
+        <label class="label-text"><span>Имя</span>
+          <input type="text" name="surname" placeholder="Игорь">
+        </label>
+        <label class="label-text"><span>Телефон</span>
+          <input type="text" name="phone" placeholder="">
+        </label>
+        <label class="label-text"><span>Email</span>
+          <input type="text" name="email" placeholder="Igor123@gmail.com">
+        </label>
+        <div class="popup-form__radio-group">
+          <label class="label-radio">
+            <input type="radio" name="delivery" checked><span>Доставка</span>
+          </label>
+          <label class="label-radio">
+            <input type="radio" name="delivery"><span>Самовывоз</span>
+          </label>
+        </div>
+        <div class="popup-form__payment-method">Способ оплаты:</div>
+        <div class="popup-form__radio-group">
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата онлайн</span>
+            </label>
+            <p>* после подтверждения заказа, откроется страница оплаты, с возможностью выбора карты.</p>
+          </div>
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата наличными</span>
+            </label>
+            <p>* вы сможете оплатить билет при получении.</p>
+          </div>
+        </div>
+        <button class="button popup-form__submit" type="submit"><span>подтвердить заказ</span>
+        </button>
+      </form>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

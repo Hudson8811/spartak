@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <!--title= `${page.title}`-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
+          <div class="header__group"><a class="header__phone" href="tel:+70001270777">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#phone"></use>
+              </svg><span>+7 000 127 0 777</span></a>
+            <div class="header__burger">
+              <div class="icon-left"></div>
+              <div class="icon-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__group header__group--desktop">
+          <nav class="header__menu">
+            <li><a href="#">расписание матчей</a></li>
+            <li><a href="#">стадион</a></li>
+            <li><a href="#">новости</a></li>
+          </nav>
+          <button class="button header__button"><span>Купить билет</span>
+          </button>
+        </div>
+      </div>
+      <div class="header-menu"><img class="stripe-1" src="img/stripe-6.png" alt=""><img class="stripe-2" src="img/stripe-8.png" alt="">
+        <nav class="header-menu__list">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a class="red" href="#">купить билет</a></li>
+        </nav><a class="header-menu__phone" href="tel:+70001270777">
+          <svg>
+            <use xlink:href="./svg/sprite.svg#phone"></use>
+          </svg><span>+7 000 127 0 777</span></a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="order">
+        <div class="container order__container">
+          <nav class="breadcrumbs order__breadcrumbs">
+            <li><a href="#">Главная</a>
+              <svg>
+                <use xlink:href="./svg/sprite.svg#arrow"></use>
+              </svg>
+            </li>
+            <li><a href="#">Купить билет</a>
+              <svg>
+                <use xlink:href="./svg/sprite.svg#arrow"></use>
+              </svg>
+            </li>
+            <li><a href="#">Тинькофф Российская премьер-лига</a>
+              <svg>
+                <use xlink:href="./svg/sprite.svg#arrow"></use>
+              </svg>
+            </li>
+            <li><span class="breadcrumbs__link breadcrumbs__link--active">Оформление заказа</span></li>
+          </nav>
+          <div class="order__title">оформление заказа</div>
+          <form action="" method="POST">
+            <div class="table">
+              <div class="table__inner">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>матч</th>
+                      <th>место</th>
+                      <th>количество</th>
+                      <th>цена</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div>
+                          <p>Тинькофф Российская премьер-лига</p>
+                          <p>Спартак (Москва) - ФК Химки (Химки)</p>
+                          <p>17 октября 2020 в 19:00</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Сектор 223</p>
+                          <p>Ряд: 10</p>
+                          <p>Место: 3</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-number">
+                          <div class="input-number__btn input-number__btn--less">-</div>
+                          <input type="number" name="number" min="0" max="999" value="0">
+                          <div class="input-number__btn input-number__btn--more">+</div>
+                        </div>
+                      </td>
+                      <td class="red">3000 RUB</td>
+                      <td>
+                        <button class="order__remove">
+                          <svg>
+                            <use xlink:href="./svg/sprite.svg#basket"></use>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><a class="button order__button" href="#popup-form"><span>оформить заказ</span></a>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__logo"><img src="img/logo.png" alt=""></div>
+        <div class="footer__for-what">Консьерж-сервис по оказанию услуг бронирования и доставке билетов</div>
+        <nav class="footer__menu">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </nav>
+        <div class="footer__contacts"><a class="footer__phone" href="tel:+70001270777">
+            <svg>
+              <use xlink:href="./svg/sprite.svg#phone"></use>
+            </svg><span>+7 000 127 0 777</span></a>
+          <div class="footer__cards">
+            <div class="footer__cards-item"><img src="images/payment/visa.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/mastercard.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/world.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <nav class="footer__nav">
+          <li><a href="#">Способы оплаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Оферта</a></li>
+        </nav>
+        <div class="footer__copyright">© 2020. Разработано в Origy</div>
+      </div>
+    </footer>
+    <div class="popup-form" id="popup-form" style="display: none">
+      <form action="" method="POST">
+        <div class="popup-form__title">контактные данные</div>
+        <label class="label-text"><span>Имя</span>
+          <input type="text" name="surname" placeholder="Игорь">
+        </label>
+        <label class="label-text"><span>Телефон</span>
+          <input type="text" name="phone" placeholder="">
+        </label>
+        <label class="label-text"><span>Email</span>
+          <input type="text" name="email" placeholder="Igor123@gmail.com">
+        </label>
+        <div class="popup-form__radio-group">
+          <label class="label-radio">
+            <input type="radio" name="delivery" checked><span>Доставка</span>
+          </label>
+          <label class="label-radio">
+            <input type="radio" name="delivery"><span>Самовывоз</span>
+          </label>
+        </div>
+        <div class="popup-form__payment-method">Способ оплаты:</div>
+        <div class="popup-form__radio-group">
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата онлайн</span>
+            </label>
+            <p>* после подтверждения заказа, откроется страница оплаты, с возможностью выбора карты.</p>
+          </div>
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата наличными</span>
+            </label>
+            <p>* вы сможете оплатить билет при получении.</p>
+          </div>
+        </div>
+        <button class="button popup-form__submit" type="submit"><span>подтвердить заказ</span>
+        </button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

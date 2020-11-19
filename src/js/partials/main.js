@@ -1,4 +1,8 @@
 $(document).ready(function () {
+	$("input[name='phone']").mask("+7-000-000-00-00", {
+		placeholder: "+7- _ _ _ - _ _ _ - _ _ - _ _"
+	});
+
 	$('.select').niceSelect();
 
 	$('.nice-select').each(function () {
@@ -79,5 +83,23 @@ $(document).ready(function () {
 	$('.input-number .input-number__btn--less').click(function(){
 		var inp=$(this).siblings('input');
 		inp.val(parseInt(inp.val())-1>0?parseInt(inp.val())-1:0);
+	});
+
+	// Popup options
+	$('[href ^= "#popup-"]').fancybox({
+		touch: false,
+		scrolling: 'no',
+		beforeShow: function(){
+			$("body").css({'overflow-y':'hidden'});
+		},
+		afterClose: function(){
+			$("body").css({'overflow-y':'visible'});
+		},
+		btnTpl : {
+			smallBtn : '<div data-fancybox-close class="popup-close"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+			'<path opacity="0.8" d="M16 1L1 16" stroke="#232121" stroke-width="2"/>\n' +
+			'<path opacity="0.8" d="M1 1L16 16" stroke="#232121" stroke-width="2"/>\n' +
+			'</svg></div>'
+		}
 	});
 });

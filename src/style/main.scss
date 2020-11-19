@@ -12,6 +12,7 @@
 @import "partials/mixins";
 @import "partials/main";
 @import "partials/components";
+@import "partials/popup";
 @import "partials/_header";
 @import "partials/footer";
 @import "blocks/first-screen";
@@ -26,3 +27,4 @@
 /* pages */
 @import "pages/purchase";
 @import "pages/purchase-detail";
+@import "pages/order";
