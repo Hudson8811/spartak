@@ -251,15 +251,11 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		min-height: calc(100vh - 66px);
 		background-color: $white;
 		overflow: hidden;
 		transform: translateY(-100%);
 		transition: transform 0.4s linear;
-
-		@include mMax {
-			min-height: calc(100vh - 104px);
-		}
+		box-sizing: border-box;
 
 		.stripe-1,
 		.stripe-2 {
@@ -282,16 +278,16 @@
 		&__list {
 			text-align: center;
 
-			@include mMax {
-				margin-top: 40px;
-			}
-
 			li {
 				+ li {
 					margin-top: 70px;
 
 					@include mMax {
 						margin-top: 40px;
+					}
+
+					@media (max-height: 500px) and (orientation: landscape) {
+						margin-top: 5px;
 					}
 				}
 
@@ -306,6 +302,11 @@
 					@include mMax {
 						font-size: 21px;
 						line-height: 25px;
+					}
+
+					@media (max-height: 500px) and (orientation: landscape) {
+						font-size: 16px;
+						line-height: 22px;
 					}
 
 					&.red {
@@ -323,6 +324,11 @@
 
 			@include mMax {
 				display: flex;
+			}
+
+			@media (max-height: 500px) and (orientation: landscape) {
+				display: flex;
+				margin-top: 15px;
 			}
 
 			svg {
