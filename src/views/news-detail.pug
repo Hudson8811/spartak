@@ -1,0 +1,77 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.article
+		.article__top
+			.container.article__container
+				.article__bg.js-inactive-article
+					img(src='images/news/news-1.jpg' alt='')
+				+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Новости'}, {href: '#', text: 'FIFA21 |  Реакция игроков “Спартака” на свои рейтинги...'}], 'breadcrumbs--white article__breadcrumbs')
+				.container.article__container-small
+					.article__title FIFA21 |  Реакция <br> игроков “Спартака” <br> на свои рейтинги
+		.article__news
+			.container.article__container
+				.container.article__container-small
+					.article__date 14 октября 2020
+					.article__block
+						p.bold На официальном канале московского «Спартака» в Youtube опубликован ролик с реакциями игроков команды на свои рейтинги в футбольном симуляторе FIFA 21.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
+							|  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							|  aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+							|  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+							|  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.article__block
+						p.bold На официальном канале московского «Спартака» в Youtube опубликован ролик с реакциями игроков команды на свои рейтинги в футбольном симуляторе FIFA 21.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. <br>
+							|  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+				img.content-pic(src='images/news/news-2.jpg' alt='')
+				.container.article__container-small
+					.article__block
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
+							|  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							|  aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+							|  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.article__share
+						.article__share-icon
+							svg
+								use(xlink:href='./svg/sprite.svg#socials--fb')
+						.article__share-icon
+							svg
+								use(xlink:href='./svg/sprite.svg#socials--fbm')
+						.article__share-icon
+							svg
+								use(xlink:href='./svg/sprite.svg#socials--ln')
+						.article__share-icon
+							svg
+								use(xlink:href='./svg/sprite.svg#socials--tw')
+						.article__share-icon
+							svg
+								use(xlink:href='./svg/sprite.svg#socials--email')
+		.article__nav
+			img(src='img/stripe-1.png' alt='')
+			.container.article__container-small
+				.article__nav-wrapper
+					a.article__nav-btn.article__nav-btn--prev(href='#')
+						p FIFA21 | Реакция <br> игроков «Спартака» на свои рейтинги
+						p.arrow
+							svg
+								use(xlink:href='./svg/sprite.svg#arrow-double')
+							span предыдущая
+					a.article__nav-btn.article__nav-btn--next(href='#')
+						p FIFA21 | Реакция <br> игроков «Спартака» на свои рейтинги
+						p.arrow
+							span следующая
+							svg
+								use(xlink:href='./svg/sprite.svg#arrow-double')

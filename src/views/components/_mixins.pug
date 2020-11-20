@@ -38,20 +38,36 @@ mixin breadcrumbs(links, className)
 					svg
 						use(xlink:href='./svg/sprite.svg#arrow')
 
-mixin select(placeholder, startOption)
-	select.select(data-placeholder= placeholder, data-option= startOption)
-		option(value="1") премьер-лига
-		option(value="2") чемпионат мира
-		option(value="3") чемпионат мира
-		option(value="4") премьер-лига
-		option(value="5") премьер-лига
-		option(value="6") премьер-лига
-		option(value="7") премьер-лига
-		option(value="8") премьер-лига
-		option(value="9") премьер-лига
+mixin select(options, placeholder, startOption, className)
+	select.select(class=className, data-placeholder= placeholder, data-option= startOption)
+		each elem in options
+			option(value=elem.value)= elem.text
 
 mixin inputNum()
 	.input-number
 		.input-number__btn.input-number__btn--less -
 		input(type='number' name='number' min='0' max='999' value='0')
 		.input-number__btn.input-number__btn--more +
+
+mixin pagination()
+	.pagination
+		a.pagination__btn.pagination__btn--first(href='#')
+			svg
+				use(xlink:href='./svg/sprite.svg#pagi-arrow-double')
+		a.pagination__btn.pagination__btn--prev(href='#')
+			svg
+				use(xlink:href='./svg/sprite.svg#pagi-arrow')
+			span Пред
+		.pagination__links
+			a.pagination__link.active(href='#') 1
+			a.pagination__link(href='#') 2
+			a.pagination__link(href='#') 3
+			a.pagination__link(href='#') 4
+			a.pagination__link(href='#') 5
+		a.pagination__btn.pagination__btn--next(href='#')
+			span След
+			svg
+				use(xlink:href='./svg/sprite.svg#pagi-arrow')
+		a.pagination__btn.pagination__btn--last(href='#')
+			svg
+				use(xlink:href='./svg/sprite.svg#pagi-arrow-double')

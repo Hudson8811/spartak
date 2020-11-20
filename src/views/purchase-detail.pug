@@ -40,11 +40,9 @@ block main
 			.container.purchase-detail__stadium-container
 				.purchase-detail__wrapper
 					.purchase-detail__scheme
-						.btn-zoom
+						a.btn-zoom(href='img/svg/stadium.svg' data-fancybox)
 							.btn-zoom__btn.btn-zoom__btn--in +
-							.btn-zoom__btn.btn-zoom__btn--out -
-						svg
-							use(xlink:href='./svg/sprite.svg#stadium')
+						img(src='img/svg/stadium.svg', alt='')
 					.table
 						.table__inner
 							table

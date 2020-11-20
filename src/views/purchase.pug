@@ -17,7 +17,16 @@ block main
 			.purchase__filter
 				.input-date
 					input(type='text', name='date', placeholder='DD / mm / yyyy')
-				+select('тип события:', 'выберите тип события')
+				+select([{value: '1', text: 'премьер-лига'},
+					{value: '2', text: 'чемпионат мира'},
+					{value: '3', text: 'чемпионат мира'},
+					{value: '4', text: 'премьер-лига'},
+					{value: '5', text: 'премьер-лига'},
+					{value: '6', text: 'премьер-лига'},
+					{value: '7', text: 'премьер-лига'},
+					{value: '8', text: 'премьер-лига'},
+					{value: '9', text: 'премьер-лига'}
+					], 'тип события:', 'выберите тип события')
 			.schedule
 				.schedule__wrapper
 					.schedule-item

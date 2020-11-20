@@ -14,10 +14,12 @@
     <header class="header">
       <div class="header__wrapper">
         <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
-          <div class="header__group"><a class="header__phone" href="tel:+70001270777">
+          <div class="header__group">
+            <div class="header__phone">
               <svg>
                 <use xlink:href="./svg/sprite.svg#phone"></use>
-              </svg><span>+7 000 127 0 777</span></a>
+              </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+            </div>
             <div class="header__burger">
               <div class="icon-left"></div>
               <div class="icon-right"></div>
@@ -40,10 +42,12 @@
           <li><a href="#">стадион</a></li>
           <li><a href="#">новости</a></li>
           <li><a class="red" href="#">купить билет</a></li>
-        </nav><a class="header-menu__phone" href="tel:+70001270777">
+        </nav>
+        <div class="header-menu__phone">
           <svg>
             <use xlink:href="./svg/sprite.svg#phone"></use>
-          </svg><span>+7 000 127 0 777</span></a>
+          </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -95,15 +99,8 @@
         <div class="purchase-detail__stadium">
           <div class="container purchase-detail__stadium-container">
             <div class="purchase-detail__wrapper">
-              <div class="purchase-detail__scheme">
-                <div class="btn-zoom">
-                  <div class="btn-zoom__btn btn-zoom__btn--in">+</div>
-                  <div class="btn-zoom__btn btn-zoom__btn--out">-</div>
-                </div>
-                <svg>
-                  <use xlink:href="./svg/sprite.svg#stadium"></use>
-                </svg>
-              </div>
+              <div class="purchase-detail__scheme"><a class="btn-zoom" href="img/svg/stadium.svg" data-fancybox>
+                  <div class="btn-zoom__btn btn-zoom__btn--in">+</div></a><img src="img/svg/stadium.svg" alt=""></div>
               <div class="table">
                 <div class="table__inner">
                   <table>
@@ -372,10 +369,12 @@
           <li><a href="#">новости</a></li>
           <li><a href="#">Купить билет</a></li>
         </nav>
-        <div class="footer__contacts"><a class="footer__phone" href="tel:+70001270777">
+        <div class="footer__contacts">
+          <div class="footer__phone">
             <svg>
               <use xlink:href="./svg/sprite.svg#phone"></use>
-            </svg><span>+7 000 127 0 777</span></a>
+            </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+          </div>
           <div class="footer__cards">
             <div class="footer__cards-item"><img src="images/payment/visa.png" alt=""></div>
             <div class="footer__cards-item"><img src="images/payment/mastercard.png" alt=""></div>

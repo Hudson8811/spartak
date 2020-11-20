@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <!--title= `${page.title}`-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__group header__group--mobile"><a class="header__logo" href="/"><img src="img/logo.png" alt=""></a>
+          <div class="header__group">
+            <div class="header__phone">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#phone"></use>
+              </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+            </div>
+            <div class="header__burger">
+              <div class="icon-left"></div>
+              <div class="icon-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__group header__group--desktop">
+          <nav class="header__menu">
+            <li><a href="#">расписание матчей</a></li>
+            <li><a href="#">стадион</a></li>
+            <li><a href="#">новости</a></li>
+          </nav>
+          <button class="button header__button"><span>Купить билет</span>
+          </button>
+        </div>
+      </div>
+      <div class="header-menu"><img class="stripe-1" src="img/stripe-6.png" alt=""><img class="stripe-2" src="img/stripe-8.png" alt="">
+        <nav class="header-menu__list">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a class="red" href="#">купить билет</a></li>
+        </nav>
+        <div class="header-menu__phone">
+          <svg>
+            <use xlink:href="./svg/sprite.svg#phone"></use>
+          </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="article article--stadium">
+        <div class="article__top">
+          <div class="container article__container">
+            <div class="article__bg"><img src="images/stadium/stadium-1.jpg" alt=""></div>
+            <nav class="breadcrumbs breadcrumbs--white article__breadcrumbs">
+              <li><a href="#">Главная</a>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow"></use>
+                </svg>
+              </li>
+              <li><span class="breadcrumbs__link breadcrumbs__link--active">Стадион</span></li>
+            </nav>
+            <div class="article__title">стадион “открытие арена”</div>
+          </div>
+        </div>
+        <div class="article__news">
+          <div class="container article__container article__container--flex">
+            <select class="select article__tab-select" data-placeholder="" data-option="о стадионе">
+              <option value="1">о стадионе</option>
+              <option value="2">матчи на стадионе</option>
+              <option value="3">как добраться</option>
+            </select>
+            <div class="article__content">
+              <div class="article__content-item" style="display: block">
+                <div class="article__block">
+                  <p class="title">о стадионе</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                     enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                     Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                  </p>
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br> consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat.</p>
+                </div><img class="content-pic" src="images/stadium/stadium-2.jpg" alt="">
+                <div class="article__block">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                     massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                  </p>
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="article__pic-gallery">
+                  <div class="article__gallery-col"><img src="images/stadium/stadium-3.jpg" alt=""></div>
+                  <div class="article__gallery-col"><img src="images/stadium/stadium-4.jpg" alt=""><img src="images/stadium/stadium-5.jpg" alt=""></div>
+                </div>
+                <div class="article__block">
+                  <p>
+                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+              <div class="article__content-item">
+                <div class="schedule">
+                  <div class="schedule__title">ближайшие матчи</div>
+                  <div class="schedule__wrapper">
+                    <div class="schedule-item">
+                      <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                      <div class="schedule-item__content">
+                        <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                        <div class="schedule-item__place">
+                          <p>17 октября</p>
+                          <p>19:00</p>
+                          <p>“Открытие арена”</p>
+                        </div>
+                        <div class="schedule-item__team">
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                            <p>спартак</p>
+                          </div>
+                          <p>vs.</p>
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                            <p>ФК химки</p>
+                          </div>
+                        </div>
+                        <button class="button schedule-item__button"><span>Купить билет</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="schedule-item">
+                      <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                      <div class="schedule-item__content">
+                        <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                        <div class="schedule-item__place">
+                          <p>17 октября</p>
+                          <p>19:00</p>
+                          <p>“Открытие арена”</p>
+                        </div>
+                        <div class="schedule-item__team">
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                            <p>спартак</p>
+                          </div>
+                          <p>vs.</p>
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                            <p>ФК химки</p>
+                          </div>
+                        </div>
+                        <button class="button schedule-item__button"><span>Купить билет</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="schedule-item">
+                      <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                      <div class="schedule-item__content">
+                        <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                        <div class="schedule-item__place">
+                          <p>17 октября</p>
+                          <p>19:00</p>
+                          <p>“Открытие арена”</p>
+                        </div>
+                        <div class="schedule-item__team">
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                            <p>спартак</p>
+                          </div>
+                          <p>vs.</p>
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                            <p>ФК химки</p>
+                          </div>
+                        </div>
+                        <button class="button schedule-item__button"><span>Купить билет</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="schedule-item">
+                      <div class="schedule-item__bg"><img src="images/bg-schedule.jpg" alt=""></div>
+                      <div class="schedule-item__content">
+                        <div class="schedule-item__match">ТИНЬКОФФ российская премьер-лига</div>
+                        <div class="schedule-item__place">
+                          <p>17 октября</p>
+                          <p>19:00</p>
+                          <p>“Открытие арена”</p>
+                        </div>
+                        <div class="schedule-item__team">
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-1.png" alt=""></div>
+                            <p>спартак</p>
+                          </div>
+                          <p>vs.</p>
+                          <div class="schedule-item__team-item">
+                            <div class="schedule-item__team-item-pic"><img src="images/schedule/team-2.png" alt=""></div>
+                            <p>ФК химки</p>
+                          </div>
+                        </div>
+                        <button class="button schedule-item__button"><span>Купить билет</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="article__content-item">
+                <div class="article__block">
+                  <p class="title">как добраться</p>
+                  <p class="bold">На метро</p>
+                  <p>
+                    Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.</p>
+                  <p class="bold">Наземный городской транспорт</p>
+                  <p>
+                    Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.</p>
+                  <p class="bold">Личный автотранспорт</p>
+                  <p>
+                    Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.</p>
+                  <p>Проход на территорию стадиона</p>
+                  <p>
+                    Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.</p>
+                  <p>
+                    Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.</p>
+                </div>
+                <div class="article__block article__block--scheme">
+                  <p class="title">схема стадиона</p>
+                  <svg>
+                    <use xlink:href="./svg/sprite.svg#stadium"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="article__tab">
+              <div class="article__tab-item article__tab-item--active"><span>о стадионе</span>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow-double"></use>
+                </svg>
+              </div>
+              <div class="article__tab-item"><span>матчи на стадионе</span>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow-double"></use>
+                </svg>
+              </div>
+              <div class="article__tab-item"><span>как добраться</span>
+                <svg>
+                  <use xlink:href="./svg/sprite.svg#arrow-double"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__logo"><img src="img/logo.png" alt=""></div>
+        <div class="footer__for-what">Консьерж-сервис по оказанию услуг бронирования и доставке билетов</div>
+        <nav class="footer__menu">
+          <li><a href="#">расписание матчей</a></li>
+          <li><a href="#">стадион</a></li>
+          <li><a href="#">новости</a></li>
+          <li><a href="#">Купить билет</a></li>
+        </nav>
+        <div class="footer__contacts">
+          <div class="footer__phone">
+            <svg>
+              <use xlink:href="./svg/sprite.svg#phone"></use>
+            </svg><a href="tel:+70001270777">+7 000 127 0 777</a>
+          </div>
+          <div class="footer__cards">
+            <div class="footer__cards-item"><img src="images/payment/visa.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/mastercard.png" alt=""></div>
+            <div class="footer__cards-item"><img src="images/payment/world.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <nav class="footer__nav">
+          <li><a href="#">Способы оплаты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Оферта</a></li>
+        </nav>
+        <div class="footer__copyright">© 2020. Разработано в Origy</div>
+      </div>
+    </footer>
+    <div class="popup-form" id="popup-form" style="display: none">
+      <form action="" method="POST">
+        <div class="popup-form__title">контактные данные</div>
+        <label class="label-text"><span>Имя</span>
+          <input type="text" name="surname" placeholder="Игорь">
+        </label>
+        <label class="label-text"><span>Телефон</span>
+          <input type="text" name="phone" placeholder="">
+        </label>
+        <label class="label-text"><span>Email</span>
+          <input type="text" name="email" placeholder="Igor123@gmail.com">
+        </label>
+        <div class="popup-form__radio-group">
+          <label class="label-radio">
+            <input type="radio" name="delivery" checked><span>Доставка</span>
+          </label>
+          <label class="label-radio">
+            <input type="radio" name="delivery"><span>Самовывоз</span>
+          </label>
+        </div>
+        <div class="popup-form__payment-method">Способ оплаты:</div>
+        <div class="popup-form__radio-group">
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата онлайн</span>
+            </label>
+            <p>* после подтверждения заказа, откроется страница оплаты, с возможностью выбора карты.</p>
+          </div>
+          <div class="popup-form__radio-item">
+            <label class="label-radio">
+              <input type="radio" name="payment"><span>Оплата наличными</span>
+            </label>
+            <p>* вы сможете оплатить билет при получении.</p>
+          </div>
+        </div>
+        <button class="button popup-form__submit" type="submit"><span>подтвердить заказ</span>
+        </button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

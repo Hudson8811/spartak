@@ -1,0 +1,173 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.article.article--stadium
+		.article__top
+			.container.article__container
+				.article__bg
+					img(src='images/stadium/stadium-1.jpg' alt='')
+				+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Стадион'}], 'breadcrumbs--white article__breadcrumbs')
+				.article__title стадион “открытие арена”
+		.article__news
+			.container.article__container.article__container--flex
+				+select([{value: '1', text: 'о стадионе'},
+					{value: '2', text: 'матчи на стадионе'},
+					{value: '3', text: 'как добраться'}
+				], '', 'о стадионе', 'article__tab-select')
+				.article__content
+					.article__content-item(style='display: block')
+						.article__block
+							p.title о стадионе
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+								|  dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+								|  enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+								|  Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+							p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br> consequat. Ut enim ad minim veniam, quis nostrud
+								|  exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat.
+						img.content-pic(src='images/stadium/stadium-2.jpg' alt='')
+						.article__block
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+								|  magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+								|  massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+							p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis
+								|  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						.article__pic-gallery
+							.article__gallery-col
+								img(src='images/stadium/stadium-3.jpg' alt='')
+							.article__gallery-col
+								img(src='images/stadium/stadium-4.jpg' alt='')
+								img(src='images/stadium/stadium-5.jpg' alt='')
+						.article__block
+							p Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+								|  venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+							p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis
+								|  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+					.article__content-item
+						.schedule
+							.schedule__title ближайшие матчи
+							.schedule__wrapper
+								.schedule-item
+									.schedule-item__bg
+										img(src='images/bg-schedule.jpg' alt='')
+									.schedule-item__content
+										.schedule-item__match ТИНЬКОФФ российская премьер-лига
+										.schedule-item__place
+											p 17 октября
+											p 19:00
+											p “Открытие арена”
+										.schedule-item__team
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-1.png' alt='')
+												p спартак
+											p vs.
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-2.png' alt='')
+												p ФК химки
+										+button('Купить билет', 'schedule-item__button')
+								.schedule-item
+									.schedule-item__bg
+										img(src='images/bg-schedule.jpg' alt='')
+									.schedule-item__content
+										.schedule-item__match ТИНЬКОФФ российская премьер-лига
+										.schedule-item__place
+											p 17 октября
+											p 19:00
+											p “Открытие арена”
+										.schedule-item__team
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-1.png' alt='')
+												p спартак
+											p vs.
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-2.png' alt='')
+												p ФК химки
+										+button('Купить билет', 'schedule-item__button')
+								.schedule-item
+									.schedule-item__bg
+										img(src='images/bg-schedule.jpg' alt='')
+									.schedule-item__content
+										.schedule-item__match ТИНЬКОФФ российская премьер-лига
+										.schedule-item__place
+											p 17 октября
+											p 19:00
+											p “Открытие арена”
+										.schedule-item__team
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-1.png' alt='')
+												p спартак
+											p vs.
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-2.png' alt='')
+												p ФК химки
+										+button('Купить билет', 'schedule-item__button')
+								.schedule-item
+									.schedule-item__bg
+										img(src='images/bg-schedule.jpg' alt='')
+									.schedule-item__content
+										.schedule-item__match ТИНЬКОФФ российская премьер-лига
+										.schedule-item__place
+											p 17 октября
+											p 19:00
+											p “Открытие арена”
+										.schedule-item__team
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-1.png' alt='')
+												p спартак
+											p vs.
+											.schedule-item__team-item
+												.schedule-item__team-item-pic
+													img(src='images/schedule/team-2.png' alt='')
+												p ФК химки
+										+button('Купить билет', 'schedule-item__button')
+					.article__content-item
+						.article__block
+							p.title как добраться
+							p.bold На метро
+							p Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены
+								|  пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.
+							p.bold Наземный городской транспорт
+							p Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены
+								|  пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.
+							p.bold Личный автотранспорт
+							p Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены
+								|  пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.
+							p Проход на территорию стадиона
+							p Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены
+								|  пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.
+							p Добраться до стадиона можно, доехав до двух ближайших станций метро — «Спартак» (3–5 минут до арены пешком) и «Тушинская» (7–10 минут до арены
+								|  пешком). Станция метро «Спартак» в матчевые дни работает в обычном режиме — как на вход, так и на выход пассажиров.
+						.article__block.article__block--scheme
+							p.title схема стадиона
+							svg
+								use(xlink:href='./svg/sprite.svg#stadium')
+				.article__tab
+					.article__tab-item.article__tab-item--active
+						span о стадионе
+						svg
+							use(xlink:href='./svg/sprite.svg#arrow-double')
+					.article__tab-item
+						span матчи на стадионе
+						svg
+							use(xlink:href='./svg/sprite.svg#arrow-double')
+					.article__tab-item
+						span как добраться
+						svg
+							use(xlink:href='./svg/sprite.svg#arrow-double')

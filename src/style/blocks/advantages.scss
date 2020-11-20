@@ -34,17 +34,23 @@
 		@include tMax {
 			font-size: 35px;
 			line-height: 37px;
+			text-align: center;
 		}
 
 		@include mMax {
 			font-size: 22px;
 			line-height: 24px;
 			margin-bottom: 18px;
+			margin-right: 0;
 		}
 	}
 
 	&__buttons {
 		display: flex;
+
+		@include mMax {
+			flex-direction: column;
+		}
 
 		.button {
 			font-size: 11px;
@@ -53,16 +59,29 @@
 
 			&:not(:last-child) {
 				margin-right: 17px;
+
+				@include mMax {
+					margin-right: 0;
+				}
 			}
 		}
 	}
 
 	&__buy {
 		width: 155px;
+
+		@include mMax {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__order {
 		width: 167px;
+
+		@include mMax {
+			width: 100%;
+		}
 	}
 
 	&__wrapper {

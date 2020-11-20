@@ -10,22 +10,30 @@ $(document).ready(function () {
 		$(this).find('.current').text($(this).prev().data('option'));
 	});
 
-	/*$('.nice-select .list').niceScroll({
-		autohidemode: false,
-		horizrailenabled:false
-	});*/
+	$('.nice-select .list').hide();
 
-	// Table
-	var table = $('.table__inner');
-	table.niceScroll({
+	$('.nice-select').click(function () {
+		if (!$(this).hasClass('open')) {
+			$(this).find('.list').show();
+		} else {
+			$(this).find('.list').hide();
+		}
+	});
+
+	var scrollOpt = {
 		autohidemode: false,
 		horizrailenabled:false,
 		cursorcolor: "#E5173E",
 		cursorborder: "1px solid #E5173E",
 		cursorborderradius: "8px",
-		background: "rgba(229, 23, 62, 0.08)",
-		//railpadding: { top: 48, right: 0, left: 0, bottom: 0 }
-	});
+		background: "rgba(229, 23, 62, 0.08)"
+	};
+
+	$('.nice-select .list').niceScroll(scrollOpt);
+
+	// Table
+	var table = $('.table__inner');
+	table.niceScroll(scrollOpt);
 
 	if (table.find('table').height() > table.height()) {
 		$('.table').append('<div class="limiter"></div>');
@@ -102,4 +110,20 @@ $(document).ready(function () {
 			'</svg></div>'
 		}
 	});
+
+	// Stadium tabs
+	$('.article--stadium .article__tab-item').click(function () {
+		$('.article__tab-item').removeClass('article__tab-item--active');
+		$(this).addClass('article__tab-item--active');
+
+		$('.article__content-item').hide().eq($(this).index()).show();
+	});
+
+	$('.article--stadium .article__tab-select .option').click(function () {
+		$('.article__content-item').hide().eq($(this).index()).show();
+	});
+
+	// Set temp picture for news
+	$('.js-inactive-article img').attr('src', '../img/zagl.jpg');
+	$('.js-inactive-article').addClass('article__bg--inactive');
 });

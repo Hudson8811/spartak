@@ -76,7 +76,7 @@
 					fill: $red;
 				}
 
-				span {
+				a {
 					color: $red;
 				}
 			}
@@ -90,7 +90,7 @@
 			transition: fill 0.3s ease;
 		}
 
-		span {
+		a {
 			font-family: $montserrat;
 			font-size: 13px;
 			line-height: 16px;

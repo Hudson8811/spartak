@@ -4,10 +4,10 @@ header.header
 			a.header__logo(href='/')
 				img(src='img/logo.png' alt='')
 			.header__group
-				a.header__phone(href='tel:+70001270777')
+				.header__phone
 					svg
 						use(xlink:href='./svg/sprite.svg#phone')
-					span +7 000 127 0 777
+					a(href='tel:+70001270777') +7 000 127 0 777
 				.header__burger
 					.icon-left
 					.icon-right
@@ -32,7 +32,7 @@ header.header
 				a(href='#') новости
 			li
 				a.red(href='#') купить билет
-		a.header-menu__phone(href='tel:+70001270777')
+		.header-menu__phone
 			svg
 				use(xlink:href='./svg/sprite.svg#phone')
-			span +7 000 127 0 777
+			a(href='tel:+70001270777') +7 000 127 0 777
