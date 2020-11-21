@@ -12,11 +12,12 @@ $(document).ready(function () {
 
 	$('.nice-select .list').hide();
 
-	$('.nice-select').click(function () {
-		if (!$(this).hasClass('open')) {
-			$(this).find('.list').show();
+	$(document).click(function (e) {
+		var tar = $('.nice-select');
+		if (!tar.is(e.target) && tar.has(e.target).length === 0 || !tar.hasClass('open')) {
+			tar.find('.list').hide();
 		} else {
-			$(this).find('.list').hide();
+			tar.find('.list').show();
 		}
 	});
 
