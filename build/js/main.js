@@ -85,11 +85,11 @@ $(document).ready(function () {
 		menu.toggleClass('header-menu--open');
 
 		if (menu.hasClass('header-menu--open')) {
-			$('.main').addClass('scroll-lock');
-			$('body').getNiceScroll().hide();
+			$('.main').addClass('main-hidden');
+			$('body').addClass('body-scroll-lock');
 		} else {
-			$('.main').removeClass('scroll-lock');
-			$('body').getNiceScroll().show();
+			$('.main').removeClass('main-hidden');
+			$('body').removeClass('body-scroll-lock');
 		}
 	});
 

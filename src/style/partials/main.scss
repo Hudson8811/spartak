@@ -67,6 +67,10 @@ img {
 	outline: none;
 }
 
-.scroll-lock {
+.main-hidden {
 	overflow: hidden;
+}
+
+.body-scroll-lock {
+	overflow-y: hidden;
 }

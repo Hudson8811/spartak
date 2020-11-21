@@ -282,7 +282,7 @@
 				+ li {
 					margin-top: 70px;
 
-					@include mMax {
+					@include tMax {
 						margin-top: 40px;
 					}
 
