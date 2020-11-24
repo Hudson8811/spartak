@@ -66,37 +66,12 @@
 			margin-left: 10px;
 		}
 	}
-
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -22.5px;
-
-		@include tMax {
-			margin: 0 -10px;
-		}
-
-		@include mMax {
-			margin: 0;
-		}
-	}
 }
 
 .news-item {
-	width: calc(33.3333% - 45px);
-	margin: 0 22.5px 45px;
+	width: 100%;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.28);
 	background-color: $white;
-
-	@include tMax {
-		width: calc(50% - 20px);
-		margin: 0 10px 20px;
-	}
-
-	@include mMax {
-		width: 100%;
-		margin: 0 0 20px;
-	}
 
 	&__preview {
 		height: 223px;

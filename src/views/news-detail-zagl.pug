@@ -13,9 +13,12 @@ block main
 	.article
 		.article__top
 			.container.article__container
-				.article__bg
-					img(src='images/news/news-1.jpg' alt='')
-				+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Новости'}, {href: '#', text: 'FIFA21 |  Реакция игроков “Спартака” на свои рейтинги...'}], 'breadcrumbs--white article__breadcrumbs')
+				.article__bg.article__bg--inactive
+					img(src='img/zagl.jpg' alt='')
+				+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Новости'}, {
+					href: '#',
+					text: 'FIFA21 |  Реакция игроков “Спартака” на свои рейтинги...'
+				}], 'breadcrumbs--white article__breadcrumbs')
 				.container.article__container-small
 					.article__title FIFA21 |  Реакция <br> игроков “Спартака” <br> на свои рейтинги
 		.article__news

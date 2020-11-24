@@ -1,0 +1,313 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.template
+		.container.template__container
+			.template__flex.template__flex--2
+				.template-block
+					.template-block__title 02. Текстовый блок
+					.text
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.template-block
+					.template-block__title 03. Цитата в текстовом блоке
+					.text
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						blockquote.quote
+							p Чемпион одет всегда В красно-белые цвета!
+							cite Lorem Ipsum
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.template-block
+					.template-block__title 04. Ссылка в тексте
+					.text
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation статьи об этом событии можно прочитать <a href="#">в разделе «Новости».</a>
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.template-block
+					.template-block__title 05. Список
+					ul.list-text
+						li Ut enim ad minim veniam.
+						li Ut enim ad minim veniam.
+						li Ut enim ad minim veniam.
+						li Ut enim ad minim veniam.
+				.template-block
+					.template-block__title 05. Кнопки
+					+button('Купить билет')
+					ul.navigation.template-block__navigation
+						li.navigation__item.navigation__item--active
+							a(href='#')
+								span о стадионе
+								svg
+									use(xlink:href='./svg/sprite.svg#arrow-double')
+						li.navigation__item
+							a(href='#')
+								span матчи на стадионе
+								svg
+									use(xlink:href='./svg/sprite.svg#arrow-double')
+						li.navigation__item
+							a(href='#')
+								span как добраться
+								svg
+									use(xlink:href='./svg/sprite.svg#arrow-double')
+				.template-block
+					.template-block__title Пагинация
+					+pagination()
+					+inputNum('template-block__num')
+				.template-block
+					.template-block__title 06. Textarea (Button, checkbox, file, radio)
+					+input('text', 'surname', 'Игорь', 'Имя')
+					+input('text', 'phone', '', 'Телефон')
+					.template-block__radio-wrapper
+						+input('radio', 'delivery', '', 'Доставка')(checked)
+						+input('radio', 'delivery', '', 'Самовывоз')
+					+input('checkbox', 'subscribe', '', 'Подписаться на рассылку писем')
+					.template-block__file-wrapper
+						a.privacy-policy.template-block__privacy-policy(href='#' target='_blank') Политика конфиденциальности
+						+input('file')(id='up-file')
+		.container.template__container-small
+			.template-block__title 07. Сетки блоков (2, 3, 4, 6 колонок)
+			.flex.flex--2
+				.flex-item
+					.text
+						h2 про спартак билет
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.flex-item
+					.text
+						h2 про спартак билет
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			.flex.flex--3
+				.flex-item
+					.news-item
+						.news-item__preview
+							img(src='images/news/news-1.jpg' alt='')
+						.news-item__content
+							.news-item__title FIFA21  |  Реакция игроков “Спартака” на свои рейтинги
+							.news-item__bottom
+								.news-item__date
+									svg
+										use(xlink:href='./svg/sprite.svg#calendar')
+									span 14 октября 2020
+								+button('подробнее', 'news-item__button')
+				.flex-item
+					.news-item
+						.news-item__preview
+							img(src='images/news/news-1.jpg' alt='')
+						.news-item__content
+							.news-item__title FIFA21  |  Реакция игроков “Спартака” на свои рейтинги
+							.news-item__bottom
+								.news-item__date
+									svg
+										use(xlink:href='./svg/sprite.svg#calendar')
+									span 14 октября 2020
+								+button('подробнее', 'news-item__button')
+				.flex-item
+					.news-item
+						.news-item__preview
+							img(src='images/news/news-1.jpg' alt='')
+						.news-item__content
+							.news-item__title FIFA21  |  Реакция игроков “Спартака” на свои рейтинги
+							.news-item__bottom
+								.news-item__date
+									svg
+										use(xlink:href='./svg/sprite.svg#calendar')
+									span 14 октября 2020
+								+button('подробнее', 'news-item__button')
+			.flex.flex--4
+				.flex-item
+					.advantages-item
+						include ../img/svg/ticket.svg
+						.advantages-item__title Официальные билеты
+						.advantages-item__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.advantages-item
+						include ../img/svg/money.svg
+						.advantages-item__title Гарантия цены
+						.advantages-item__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.flex-item
+					.advantages-item
+						include ../img/svg/shield.svg
+						.advantages-item__title VIP билеты
+						.advantages-item__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.flex-item
+					.advantages-item
+						include ../img/svg/parking.svg
+						.advantages-item__title Парковка
+						.advantages-item__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			.flex.flex--6
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+				.flex-item
+					.text
+						h3 Официальные билеты
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.
+			.template-block__title 08. Таблица
+			.table
+				.table__inner
+					table
+						thead
+							tr
+								th сектор
+								th наличие
+								th цена
+								th количество
+								th
+						tbody
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+							tr
+								td D233
+								td 32 билета
+								td.red 3000 RUB
+								td
+									+inputNum('purchase-detail__num')
+								td
+									+button('в корзину')
+			.template-block__title 09. Модальные окна
+			.popup
+				.popup__title вы подтверждаете заказ?
+				.popup__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				.popup__btns
+					+button('Отменить', 'button--white')
+					+button('Подтвердить')
+				.popup__close
+					svg
+						use(xlink:href='./svg/sprite.svg#close')
+			.template-block__title 10. Обратная навигация
+			+breadcrumbs([{href: '#', text: 'Главная'}, {href: '#', text: 'Купить билет'}, {href: '#', text: 'Тинькофф Российская премьер-лига'}])
+			.template-block__title 11. Выпадающий список
+			+select([{value: '1', text: 'премьер-лига'},
+				{value: '2', text: 'чемпионат мира'},
+				{value: '3', text: 'чемпионат мира'},
+				{value: '4', text: 'премьер-лига'},
+				{value: '5', text: 'премьер-лига'},
+				{value: '6', text: 'премьер-лига'},
+				{value: '7', text: 'премьер-лига'},
+				{value: '8', text: 'премьер-лига'},
+				{value: '9', text: 'премьер-лига'}
+			], 'тип события:', 'выберите тип события')

@@ -16,15 +16,28 @@ mixin input(type, inputName, placeholder, labelText, value)
 	if type === 'text' || type === 'email'
 		label.label-text
 			span= labelText
-			input(type=('text' || 'email'), name=inputName, value=value, placeholder=placeholder)
+			input(type=('text' || 'email'), name=inputName, value=value, placeholder=placeholder)&attributes(attributes)
 	if type === 'checkbox'
 		label.label-check
-			input(type='checkbox', name=inputName)
+			input(type='checkbox', name=inputName)&attributes(attributes)
+			p
 			span!= labelText
 	if type === 'radio'
 		label.label-radio
 			input(type='radio', name=inputName)&attributes(attributes)
+			p
 			span!= labelText
+	if type === 'file'
+		.file
+			label
+				input(type='file')&attributes(attributes)
+				svg
+					use(xlink:href='./svg/sprite.svg#upload')
+				span PDF
+			.file__loaded
+				a(download)
+				svg
+					use(xlink:href='./svg/sprite.svg#close')
 
 mixin breadcrumbs(links, className)
 	nav.breadcrumbs(class=className)
@@ -34,7 +47,8 @@ mixin breadcrumbs(links, className)
 					span.breadcrumbs__link.breadcrumbs__link--active= elem.text
 			else
 				li
-					a(href=elem.href)= elem.text
+					a(href=elem.href)
+						span= elem.text
 					svg
 						use(xlink:href='./svg/sprite.svg#arrow')
 
@@ -43,8 +57,8 @@ mixin select(options, placeholder, startOption, className)
 		each elem in options
 			option(value=elem.value)= elem.text
 
-mixin inputNum()
-	.input-number
+mixin inputNum(className)
+	.input-number(class=className)
 		.input-number__btn.input-number__btn--less -
 		input(type='number' name='number' min='0' max='999' value='0')
 		.input-number__btn.input-number__btn--more +

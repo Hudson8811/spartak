@@ -43,80 +43,13 @@
 			}
 		}
 
-		&__content-item {
-			display: none;
-		}
-
-		&__tab {
+		&__navigation {
 			margin-left: 25px;
 
 			@include tMax {
-				display: none;
-			}
-		}
-
-		&__tab-select {
-			display: none;
-			margin-bottom: 35px;
-
-			@include tMax {
-				display: flex;
-			}
-
-			@include mMax {
-				margin-bottom: 50px;
-			}
-		}
-
-		&__tab-item {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			cursor: pointer;
-
-			+ .article__tab-item {
-				margin-top: 17px;
-			}
-
-			span {
-				font-family: $montserrat;
-				font-weight: bold;
-				font-size: 14px;
-				line-height: 25px;
-				letter-spacing: 0.03em;
-				text-transform: uppercase;
-				color: $red;
-			}
-
-			svg {
-				width: 12px;
-				height: 14px;
-				fill: $red;
-				margin-left: 10px;
-			}
-
-			&--active {
-				pointer-events: none;
-
-				span {
-					display: flex;
-					align-items: center;
-					color: #232121;
-					position: relative;
-
-					&::after {
-						content: '';
-						display: block;
-						width: 3px;
-						height: 25px;
-						background-color: #232121;
-						margin-left: 20px;
-					}
-				}
-
-				svg {
-					display: none;
-				}
+				order: -1;
+				margin-left: 0;
+				margin-bottom: 60px;
 			}
 		}
 
@@ -135,25 +68,12 @@
 				}
 			}
 
-			p.title {
-				font-family: $montserrat;
-				font-size: 30px;
-				line-height: 33px;
-				font-weight: bold;
-				letter-spacing: 0.04em;
-				text-transform: uppercase;
-				margin-bottom: 45px;
-
-				@include mMax {
-					font-size: 28px;
-					line-height: 31px;
-					margin-bottom: 30px;
-				}
-			}
-
-			p.bold {
+			h3 {
 				margin-top: 40px;
-				margin-bottom: -12px;
+
+				@include tMax {
+					margin-top: 20px;
+				}
 			}
 
 			&--scheme {
@@ -244,6 +164,7 @@
 			font-weight: bold;
 			letter-spacing: 0.04em;
 			text-transform: uppercase;
+			margin-top: 50px;
 			margin-bottom: 53px;
 
 			@include mMax {

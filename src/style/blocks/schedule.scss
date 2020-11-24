@@ -63,37 +63,16 @@
 		}
 	}
 
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -36px;
-
-		@include tMax {
-			margin: 0 -15px;
-		}
-
-		@include mMax {
-			margin: 0;
-		}
+	.flex--2 .flex-item {
+		margin-bottom: 60px;
 	}
 }
 
 .schedule-item {
-	width: calc(50% - 72px);
-	margin: 0 36px 78px;
+	width: 100%;
 	border: 1px solid $mainColor;
 	position: relative;
 	box-sizing: border-box;
-
-	@include tMax {
-		width: calc(50% - 30px);
-		margin: 0 15px 40px;
-	}
-
-	@include mMax {
-		width: 100%;
-		margin: 0 0 40px;
-	}
 
 	&__bg {
 		position: absolute;

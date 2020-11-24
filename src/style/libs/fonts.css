@@ -24,6 +24,14 @@
 
 @font-face {
     font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
     src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;

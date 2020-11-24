@@ -151,4 +151,14 @@
 			width: 100%;
 		}
 	}
+
+	&__num {
+		justify-content: center;
+
+		input,
+		.input-number__btn {
+			width: 32px;
+			height: 32px;
+		}
+	}
 }

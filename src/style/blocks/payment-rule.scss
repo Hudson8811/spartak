@@ -1,6 +1,7 @@
 .payment-rule {
 	background-color: $red;
 	position: relative;
+	overflow: hidden;
 
 	> img {
 		height: 100%;
@@ -42,39 +43,13 @@
 			text-align: center;
 		}
 	}
-
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 0 -40px;
-
-		@include tMax {
-			margin: 0 -15px;
-		}
-
-		@include mMax {
-			margin: 0;
-		}
-	}
 }
 
 .payment-item {
-	width: calc(33.3333% - 80px);
-	margin: 0 40px 50px;
+	width: 100%;
 	padding: 22px 20px 31px 22px;
 	border: 1px solid $white;
 	box-sizing: border-box;
-
-	@include tMax {
-		width: calc(50% - 30px);
-		margin: 0 15px 30px;
-	}
-
-	@include mMax {
-		width: 100%;
-		margin: 0 0 15px;
-	}
 
 	svg {
 		max-width: 77px;

@@ -112,8 +112,37 @@ $(document).ready(function () {
 		}
 	});
 
+	// Pagination
+	if ($('.pagination__link').first().hasClass('active')) {
+		$('.pagination__btn--first').hide();
+		$('.pagination__btn--prev').hide();
+	}
+
+	if ($('.pagination__link').last().hasClass('active')) {
+		$('.pagination__btn--next').hide();
+		$('.pagination__btn--last').hide();
+	}
+
+	// Upload pdf
+	document.querySelector('#up-file').addEventListener('change', function () {
+		var splittedFakePath = this.value.split('\\');
+
+		var ext = this.value.match(/\.([^\.]+)$/)[1];
+
+		switch (ext) {
+			case 'pdf':
+				$('.file__loaded').css('display', 'flex');
+				$('.file__loaded a').text(splittedFakePath[splittedFakePath.length - 1]);
+				break;
+		}
+	});
+
+	$('.file__loaded svg').click(function () {
+		$('.file__loaded a').text('').parent().hide();
+	});
+
 	// Stadium tabs
-	$('.article--stadium .article__tab-item').click(function () {
+	/*$('.article--stadium .article__tab-item').click(function () {
 		$('.article__tab-item').removeClass('article__tab-item--active');
 		$(this).addClass('article__tab-item--active');
 
@@ -122,9 +151,5 @@ $(document).ready(function () {
 
 	$('.article--stadium .article__tab-select .option').click(function () {
 		$('.article__content-item').hide().eq($(this).index()).show();
-	});
-
-	// Set temp picture for news
-	$('.js-inactive-article img').attr('src', '../img/zagl.jpg');
-	$('.js-inactive-article').addClass('article__bg--inactive');
+	});*/
 });
