@@ -10,6 +10,8 @@ $( function() {
 
         var price = {'1': 8000,'2':11000,'3':1000}
 
+        var sectionCoord = {'c214':[-1025,-2802], 'c1':[0,0]};
+
         $('.js-plusZoom').on('click',function (){
             event.preventDefault();
             if (zoomLevel < maxScale){
@@ -52,7 +54,6 @@ $( function() {
             $('.plan-block').toggleClass('fullmode');
         });
 
-        var sectionCoord = {'c214':[-1025,-2802], 'c1':[0,0]};
         $('.plan svg path.st24[data-active=true]').on('click',function (){
             zoomLevel = 2;
             var scale = zoomLevel*zoomScale;
