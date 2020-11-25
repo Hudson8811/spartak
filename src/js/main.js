@@ -8,8 +8,11 @@
 //= libs/select2.full.min.js
 //= libs/jquery.nicescroll.min.js
 //= libs/datepicker.min.js
+//= libs/jquery-ui.min.js
+//= libs/jquery.ui.touch-punch.min.js
 
 /* my scripts */
 
 //= partials/header.js
 //= partials/main.js
+//= partials/plan.js
