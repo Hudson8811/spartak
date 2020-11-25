@@ -392,9 +392,6 @@ function checkPlaces(places,price) {
     });
 
     totalSectors = unique(totalSectors);
-    console.log(totalPlaces);
-    console.log(totalPrice);
-    console.log(totalSectors);
 
     if (totalSectors.length > 1) {
         $('.plan-info__text--sector').html('сектор: неск.');
