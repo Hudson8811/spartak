@@ -278,8 +278,8 @@ $(document).ready(function () {
 	});*/
 });
 $( function() {
-    if ($( ".plan svg" ).length > 0) {
-        var dragSvg = $( ".plan svg" )
+    if ($( ".plan .svg" ).length > 0) {
+        var dragSvg = $( ".plan .svg" )
         dragSvg.draggable();
         dragSvg.draggable( "disable" );
 
