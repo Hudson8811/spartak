@@ -62,9 +62,7 @@
     .st39{font-size:4.0006px}
     .st42{font-size:1.9585px}
 
-    path.st24:not([data-active="true"]){
-      display: none;
-    }
+
     path.st24{
       cursor: pointer;
       &[data-type='1']{
@@ -79,6 +77,11 @@
         fill: #FCC865;
         stroke: #FCC865;
       }
+    }
+
+    path.st24:hover{
+      fill: #E5173E;
+      stroke: #E5173E;
     }
 
     &.zoomed{
