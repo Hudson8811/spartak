@@ -433,11 +433,12 @@ $circle-margin: 7px;
   }
 
   .row {
-    display: flex;
-    justify-content: center;
+    font-size: 0;
+    text-align: center;
   }
 
   .place {
+    display: inline-block;
     min-width: 27px;
     min-height: 26px;
     margin: 1.5px;
@@ -445,6 +446,10 @@ $circle-margin: 7px;
     line-height: 26px;
     font-weight: 500;
     text-align: center;
+
+    &.skip {
+      margin-top: -7px;
+    }
 
     &.booked {
       background-color: #dededf;
