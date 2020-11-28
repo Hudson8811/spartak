@@ -124,7 +124,7 @@ $(document).ready(function () {
 	}
 
 	// Upload pdf
-	document.querySelector('#up-file').addEventListener('change', function () {
+	$('#up-file').change(function () {
 		var splittedFakePath = this.value.split('\\');
 
 		var ext = this.value.match(/\.([^\.]+)$/)[1];
@@ -141,15 +141,22 @@ $(document).ready(function () {
 		$('.file__loaded a').text('').parent().hide();
 	});
 
-	// Stadium tabs
-	/*$('.article--stadium .article__tab-item').click(function () {
-		$('.article__tab-item').removeClass('article__tab-item--active');
-		$(this).addClass('article__tab-item--active');
-
-		$('.article__content-item').hide().eq($(this).index()).show();
-	});
-
-	$('.article--stadium .article__tab-select .option').click(function () {
-		$('.article__content-item').hide().eq($(this).index()).show();
-	});*/
+	// Sector tooltip
+	$('.place').hover(
+		function () {
+			new jBox('Tooltip', {
+				attach: '.place.available, .place.selected ',
+				onOpen: function() {
+					var row = this.source.attr('data-row');
+					var place = this.source.attr('data-place');
+					var price = this.source.attr('data-price');
+					this.setContent('<div class="place_info">Ряд: <span class="param">'+row+'</span><p>Место: <span class="param">'+place+'</span></p>Цена: <span class="param">'+price+' руб.</span></div>');
+				},
+			});
+			new jBox('Tooltip', {
+				attach: '.place.booked',
+				content: '<div class="place_info"><p>Место занято</p></div>'
+			});
+		}
+	);
 });

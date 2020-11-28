@@ -10,6 +10,7 @@
 //= libs/datepicker.min.js
 //= libs/jquery-ui.min.js
 //= libs/jquery.ui.touch-punch.min.js
+//= libs/jBox.min.js
 
 /* my scripts */
 
