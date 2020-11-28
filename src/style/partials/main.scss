@@ -78,3 +78,10 @@ img {
 .param {
 	font-weight: bold;
 }
+
+.place.active{
+	cursor: pointer;
+}
+.place.active:hover{
+	opacity: 0.7;
+}
