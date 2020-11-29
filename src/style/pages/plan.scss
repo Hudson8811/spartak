@@ -423,7 +423,8 @@ $circle-margin: 7px;
   .sector {
     white-space: nowrap;
     overflow-y: auto;
-    margin-bottom: 50px;
+    max-width: 1360px;
+    margin: 0 auto 50px;
   }
 
   .content {

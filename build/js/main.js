@@ -429,6 +429,20 @@ function unique(arr) {
     return result;
 }
 
+function anchorScroll(e) {
+	e.click(function () {
+		link = $(this).attr('id');
+		to = $('.purchase-sector.' + link).offset().top;
+		$('body, html').animate({
+			scrollTop: to
+		}, 800);
+	});
+}
+
 $(window).on('load', function() {
     $('.plan-preloader').remove();
+    
+    $('.plan svg .place').click(function () {
+        anchorScroll($(this));
+		});
 });
