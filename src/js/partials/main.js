@@ -142,9 +142,22 @@ $(document).ready(function () {
 	});
 
 	// Sector tooltip
-	$('.place').hover(
+	new jBox('Tooltip', {
+		attach: '.place.available, .place.selected ',
+		onOpen: function() {
+			var row = this.source.attr('data-row');
+			var place = this.source.attr('data-place');
+			var price = this.source.attr('data-price');
+			this.setContent('<div class="place_info">Ряд: <span class="param">'+row+'</span><p>Место: <span class="param">'+place+'</span></p>Цена: <span class="param">'+price+' руб.</span></div>');
+		},
+	});
+	new jBox('Tooltip', {
+		attach: '.place.booked',
+		content: '<div class="place_info"><p>Место занято</p></div>'
+	});
+	/*$('.place').hover(
 		function () {
-			new jBox('Tooltip', {
+			$(this).jBox('Tooltip', {
 				attach: '.place.available, .place.selected ',
 				onOpen: function() {
 					var row = this.source.attr('data-row');
@@ -153,10 +166,10 @@ $(document).ready(function () {
 					this.setContent('<div class="place_info">Ряд: <span class="param">'+row+'</span><p>Место: <span class="param">'+place+'</span></p>Цена: <span class="param">'+price+' руб.</span></div>');
 				},
 			});
-			new jBox('Tooltip', {
+			$(this).jBox('Tooltip', {
 				attach: '.place.booked',
 				content: '<div class="place_info"><p>Место занято</p></div>'
 			});
 		}
-	);
+	);*/
 });
