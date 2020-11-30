@@ -458,13 +458,19 @@ $circle-margin: 7px;
     }
 
     &.available {
-      background-color: #e70b08;
+      background-color: #e5173e;
       color: #fff;
       cursor: pointer;
       
       &:hover {
-        background-color: #c40a08;
+        opacity: 0.7;
       }
+    }
+
+    &.selected{
+      background: #039946;
+      color: #fff;
+      font-weight: normal;
     }
   }
 
