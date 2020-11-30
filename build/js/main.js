@@ -294,5 +294,5 @@ function anchorScroll(e) {
 $(window).on('load', function() {
     $('.plan-preloader').remove();
 
-		anchorScroll($('.plan svg .place'));
+		anchorScroll($('.plan svg .place.active'));
 });
