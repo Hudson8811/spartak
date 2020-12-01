@@ -79,8 +79,14 @@ img {
 	font-weight: bold;
 }
 
+.place > *:first-child{
+	fill:#919090;
+}
 .place.active{
 	cursor: pointer;
+}
+.place.active > *:first-child{
+	fill:#e5173e;
 }
 .place.active:hover{
 	opacity: 0.7;
