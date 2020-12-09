@@ -1,3 +1,27 @@
+var jBox1, jBox2;
+
+function initJBox(){
+	if (jBox1 != undefined && jBox1 != null) {
+		jBox1.destroy();
+	}
+	if (jBox2 != undefined && jBox2 != null) {
+		jBox2.destroy();
+	}
+	jBox1 = new jBox('Tooltip', {
+		attach: '.place.available, .place.selected ',
+		onOpen: function() {
+			var row = this.source.attr('data-row');
+			var place = this.source.attr('data-place');
+			var price = this.source.attr('data-price');
+			this.setContent('<div class="place_info">Ряд: <span class="param">'+row+'</span><p>Место: <span class="param">'+place+'</span></p>Цена: <span class="param">'+price+' руб.</span></div>');
+		},
+	});
+	jBox2 = new jBox('Tooltip', {
+		attach: '.place.booked',
+		content: '<div class="place_info"><p>Место занято</p></div>'
+	});
+}
+
 $(document).ready(function () {
 	$("input[name='phone']").mask("+7-000-000-00-00", {
 		placeholder: "+7- _ _ _ - _ _ _ - _ _ - _ _"
@@ -142,17 +166,6 @@ $(document).ready(function () {
 	});
 
 	// Sector tooltip
-	new jBox('Tooltip', {
-		attach: '.place.available, .place.selected ',
-		onOpen: function() {
-			var row = this.source.attr('data-row');
-			var place = this.source.attr('data-place');
-			var price = this.source.attr('data-price');
-			this.setContent('<div class="place_info">Ряд: <span class="param">'+row+'</span><p>Место: <span class="param">'+place+'</span></p>Цена: <span class="param">'+price+' руб.</span></div>');
-		},
-	});
-	new jBox('Tooltip', {
-		attach: '.place.booked',
-		content: '<div class="place_info"><p>Место занято</p></div>'
-	});
+	initJBox();
 });
+
